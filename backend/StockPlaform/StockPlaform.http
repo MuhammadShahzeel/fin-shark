@@ -1,0 +1,6 @@
+@StockPlaform_HostAddress = http://localhost:5156
+
+GET {{StockPlaform_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
