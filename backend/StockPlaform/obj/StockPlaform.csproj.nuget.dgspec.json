@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\shahz\\OneDrive\\Desktop\\project 2\\StockPlaform\\StockPlaform\\StockPlaform.csproj": {}
+    "C:\\Users\\shahz\\OneDrive\\Desktop\\project 2\\backend\\StockPlaform\\StockPlaform.csproj": {}
   },
   "projects": {
-    "C:\\Users\\shahz\\OneDrive\\Desktop\\project 2\\StockPlaform\\StockPlaform\\StockPlaform.csproj": {
+    "C:\\Users\\shahz\\OneDrive\\Desktop\\project 2\\backend\\StockPlaform\\StockPlaform.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\shahz\\OneDrive\\Desktop\\project 2\\StockPlaform\\StockPlaform\\StockPlaform.csproj",
+        "projectUniqueName": "C:\\Users\\shahz\\OneDrive\\Desktop\\project 2\\backend\\StockPlaform\\StockPlaform.csproj",
         "projectName": "StockPlaform",
-        "projectPath": "C:\\Users\\shahz\\OneDrive\\Desktop\\project 2\\StockPlaform\\StockPlaform\\StockPlaform.csproj",
+        "projectPath": "C:\\Users\\shahz\\OneDrive\\Desktop\\project 2\\backend\\StockPlaform\\StockPlaform.csproj",
         "packagesPath": "C:\\Users\\shahz\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\shahz\\OneDrive\\Desktop\\project 2\\StockPlaform\\StockPlaform\\obj\\",
+        "outputPath": "C:\\Users\\shahz\\OneDrive\\Desktop\\project 2\\backend\\StockPlaform\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

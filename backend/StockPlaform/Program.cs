@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using StockPlaform.Data;
+using StockPlaform.Interfaces;
+using StockPlaform.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +13,11 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<ApplicationDBContext>(options =>
    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+// Register the StockRepository
+builder.Services.AddScoped<IStockRepository,StockRepository>();
+
+
 
 var app = builder.Build();
 
