@@ -37,7 +37,7 @@ namespace StockPlaform.Controllers
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(int id)
         {
-            var stock = await _context.Stocks.FindAsync(id);
+            var stock = await _stockRepo.GetByIdAsync(id);
             if (stock == null) {
                 return NotFound();
             }
@@ -53,47 +53,38 @@ namespace StockPlaform.Controllers
                 return BadRequest("Invalid stock data.");
             }
             var newStock = createDto.ToStockFromCreateDto(); //dto->model
-            await _context.Stocks.AddAsync(newStock);//model->db
-            await _context.SaveChangesAsync();
+            await _stockRepo.CreateAsync(newStock);//model->db
+           
             return CreatedAtAction(nameof(GetById), new { id = newStock.Id }, newStock.ToStockDto());
         }
 
         [HttpPut("{id}")]
         public async Task<IActionResult> Update(int id, [FromBody] UpdateStockRequestDto updateDto)
         {
-
             if (updateDto == null)
-            {
                 return BadRequest("Invalid stock data.");
-            }
 
-
-            var stockToUpdate = await _context.Stocks.FindAsync(id); // its recommended but work only for PK
-            //you can also use 
-            //var stockModel = _context.Stocks.FirstOrDefault(x => x.Id == id);
-            if (stockToUpdate == null)
-            {
+            var stock = await _stockRepo.GetByIdAsync(id);
+            if (stock == null)
                 return NotFound();
-            }
-            stockToUpdate.UpdateFromDto(updateDto);
-            await _context.SaveChangesAsync();
 
-            return Ok(stockToUpdate.ToStockDto());
+            stock.UpdateFromDto(updateDto);
 
-
-
-
-
+            var updated = await _stockRepo.UpdateAsync(stock);
+            return Ok(updated.ToStockDto());
         }
         [HttpDelete("{id}")]
         public async  Task<IActionResult> Delete(int id)
         {
-            //var stockToDelete = _context.Stocks.FirstOrDefault(s => s.Id == id);
-            var stockToDelete = await _context.Stocks.FindAsync(id); 
-            if (stockToDelete is null)
+          
+            var stockToDelete = await _stockRepo.DeleteAsync(id); 
+            if (stockToDelete == null)
+            {
                 return NotFound();
-            _context.Stocks.Remove (stockToDelete); //dont need await
-            await _context.SaveChangesAsync();
+            }
+                
+           
+           
             return NoContent(); 
         }
 
