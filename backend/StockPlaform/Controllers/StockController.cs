@@ -16,20 +16,20 @@ namespace StockPlaform.Controllers
         private readonly ApplicationDBContext _context;
         private readonly IStockRepository _stockRepo;
 
-        public StockController(ApplicationDBContext context,IStockRepository stockRepo)
+        public StockController(ApplicationDBContext context, IStockRepository stockRepo)
         {
             _context = context;
             _stockRepo = stockRepo;
         }
 
         [HttpGet]
-        public async  Task<IActionResult> GetAll()
+        public async Task<IActionResult> GetAll()
         {
             var stocks = await _stockRepo.GetAllAsync();
 
 
-            var stockDto = stocks.Select(s=>s.ToStockDto());
-       
+            var stockDto = stocks.Select(s => s.ToStockDto());
+
             return Ok(stockDto);
 
 
@@ -38,7 +38,8 @@ namespace StockPlaform.Controllers
         public async Task<IActionResult> GetById(int id)
         {
             var stock = await _stockRepo.GetByIdAsync(id);
-            if (stock == null) {
+            if (stock == null)
+            {
                 return NotFound();
             }
 
@@ -46,7 +47,7 @@ namespace StockPlaform.Controllers
         }
 
         [HttpPost]
-        public async  Task<IActionResult> Create([FromBody] CreateStockRequestDto createDto)
+        public async Task<IActionResult> Create([FromBody] CreateStockRequestDto createDto)
         {
             if (createDto == null)
             {
@@ -54,7 +55,7 @@ namespace StockPlaform.Controllers
             }
             var newStock = createDto.ToStockFromCreateDto(); //dto->model
             await _stockRepo.CreateAsync(newStock);//model->db
-           
+
             return CreatedAtAction(nameof(GetById), new { id = newStock.Id }, newStock.ToStockDto());
         }
 
@@ -74,19 +75,20 @@ namespace StockPlaform.Controllers
             return Ok(updated.ToStockDto());
         }
         [HttpDelete("{id}")]
-        public async  Task<IActionResult> Delete(int id)
+        public async Task<IActionResult> Delete(int id)
         {
-          
-            var stockToDelete = await _stockRepo.DeleteAsync(id); 
+
+            var stockToDelete = await _stockRepo.DeleteAsync(id);
             if (stockToDelete == null)
             {
                 return NotFound();
             }
-                
-           
-           
-            return NoContent(); 
-        }
+
+
+
+            return NoContent();
+        }
+
 
 
 

@@ -16,6 +16,8 @@ builder.Services.AddDbContext<ApplicationDBContext>(options =>
 
 // Register the StockRepository
 builder.Services.AddScoped<IStockRepository,StockRepository>();
+// Register the CommentRepository
+builder.Services.AddScoped<ICommentRepository, CommentRepository>();
 
 
 

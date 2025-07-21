@@ -80,7 +80,7 @@
               "RelativeDocumentMoniker": "StockPlaform\\Interfaces\\IStockRepository.cs",
               "ToolTip": "C:\\Users\\shahz\\OneDrive\\Desktop\\project 2\\backend\\StockPlaform\\Interfaces\\IStockRepository.cs",
               "RelativeToolTip": "StockPlaform\\Interfaces\\IStockRepository.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAiwA8AAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-21T21:10:42.549Z",
               "EditorCaption": ""
@@ -91,11 +91,12 @@
               "Title": "StockController.cs",
               "DocumentMoniker": "C:\\Users\\shahz\\OneDrive\\Desktop\\project 2\\backend\\StockPlaform\\Controllers\\StockController.cs",
               "RelativeDocumentMoniker": "StockPlaform\\Controllers\\StockController.cs",
-              "ToolTip": "C:\\Users\\shahz\\OneDrive\\Desktop\\project 2\\backend\\StockPlaform\\Controllers\\StockController.cs",
-              "RelativeToolTip": "StockPlaform\\Controllers\\StockController.cs",
-              "ViewState": "AgIAADYAAAAAAAAAAAAswEEAAAAAAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\shahz\\OneDrive\\Desktop\\project 2\\backend\\StockPlaform\\Controllers\\StockController.cs*",
+              "RelativeToolTip": "StockPlaform\\Controllers\\StockController.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-18T19:59:29.933Z"
+              "WhenOpened": "2025-07-18T19:59:29.933Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -107,7 +108,8 @@
               "RelativeToolTip": "StockPlaform\\Mappers\\StockMappers.cs",
               "ViewState": "AgIAAB0AAAAAAAAAAADwvzUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-18T21:24:39.625Z"
+              "WhenOpened": "2025-07-18T21:24:39.625Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
