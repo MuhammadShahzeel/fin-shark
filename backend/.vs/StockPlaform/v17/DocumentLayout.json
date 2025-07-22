@@ -11,6 +11,26 @@
       "RelativeMoniker": "D:0:0:{88A93128-85AE-40F4-ABDC-3814D897A091}|StockPlaform\\StockPlaform.csproj|solutionrelative:stockplaform\\controllers\\stockcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{88A93128-85AE-40F4-ABDC-3814D897A091}|StockPlaform\\StockPlaform.csproj|c:\\users\\shahz\\onedrive\\desktop\\project 2\\backend\\stockplaform\\mappers\\commentmappers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88A93128-85AE-40F4-ABDC-3814D897A091}|StockPlaform\\StockPlaform.csproj|solutionrelative:stockplaform\\mappers\\commentmappers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88A93128-85AE-40F4-ABDC-3814D897A091}|StockPlaform\\StockPlaform.csproj|c:\\users\\shahz\\onedrive\\desktop\\project 2\\backend\\stockplaform\\mappers\\stockmappers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88A93128-85AE-40F4-ABDC-3814D897A091}|StockPlaform\\StockPlaform.csproj|solutionrelative:stockplaform\\mappers\\stockmappers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88A93128-85AE-40F4-ABDC-3814D897A091}|StockPlaform\\StockPlaform.csproj|c:\\users\\shahz\\onedrive\\desktop\\project 2\\backend\\stockplaform\\dtos\\comment\\commentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88A93128-85AE-40F4-ABDC-3814D897A091}|StockPlaform\\StockPlaform.csproj|solutionrelative:stockplaform\\dtos\\comment\\commentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88A93128-85AE-40F4-ABDC-3814D897A091}|StockPlaform\\StockPlaform.csproj|c:\\users\\shahz\\onedrive\\desktop\\project 2\\backend\\stockplaform\\models\\comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88A93128-85AE-40F4-ABDC-3814D897A091}|StockPlaform\\StockPlaform.csproj|solutionrelative:stockplaform\\models\\comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88A93128-85AE-40F4-ABDC-3814D897A091}|StockPlaform\\StockPlaform.csproj|c:\\users\\shahz\\onedrive\\desktop\\project 2\\backend\\stockplaform\\dtos\\stock\\stockdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88A93128-85AE-40F4-ABDC-3814D897A091}|StockPlaform\\StockPlaform.csproj|solutionrelative:stockplaform\\dtos\\stock\\stockdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{88A93128-85AE-40F4-ABDC-3814D897A091}|StockPlaform\\StockPlaform.csproj|c:\\users\\shahz\\onedrive\\desktop\\project 2\\backend\\stockplaform\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{88A93128-85AE-40F4-ABDC-3814D897A091}|StockPlaform\\StockPlaform.csproj|solutionrelative:stockplaform\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -27,20 +47,12 @@
       "RelativeMoniker": "D:0:0:{88A93128-85AE-40F4-ABDC-3814D897A091}|StockPlaform\\StockPlaform.csproj|solutionrelative:stockplaform\\interfaces\\icommentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{88A93128-85AE-40F4-ABDC-3814D897A091}|StockPlaform\\StockPlaform.csproj|c:\\users\\shahz\\onedrive\\desktop\\project 2\\backend\\stockplaform\\mappers\\stockmappers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{88A93128-85AE-40F4-ABDC-3814D897A091}|StockPlaform\\StockPlaform.csproj|solutionrelative:stockplaform\\mappers\\stockmappers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{88A93128-85AE-40F4-ABDC-3814D897A091}|StockPlaform\\StockPlaform.csproj|c:\\users\\shahz\\onedrive\\desktop\\project 2\\backend\\stockplaform\\dtos\\stock\\updatestockrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{88A93128-85AE-40F4-ABDC-3814D897A091}|StockPlaform\\StockPlaform.csproj|solutionrelative:stockplaform\\dtos\\stock\\updatestockrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{88A93128-85AE-40F4-ABDC-3814D897A091}|StockPlaform\\StockPlaform.csproj|c:\\users\\shahz\\onedrive\\desktop\\project 2\\backend\\stockplaform\\dtos\\stock\\createstockrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{88A93128-85AE-40F4-ABDC-3814D897A091}|StockPlaform\\StockPlaform.csproj|solutionrelative:stockplaform\\dtos\\stock\\createstockrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{88A93128-85AE-40F4-ABDC-3814D897A091}|StockPlaform\\StockPlaform.csproj|c:\\users\\shahz\\onedrive\\desktop\\project 2\\backend\\stockplaform\\dtos\\stock\\stockdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{88A93128-85AE-40F4-ABDC-3814D897A091}|StockPlaform\\StockPlaform.csproj|solutionrelative:stockplaform\\dtos\\stock\\stockdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{88A93128-85AE-40F4-ABDC-3814D897A091}|StockPlaform\\StockPlaform.csproj|c:\\users\\shahz\\onedrive\\desktop\\project 2\\backend\\stockplaform\\readme.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
@@ -59,10 +71,6 @@
       "RelativeMoniker": "D:0:0:{88A93128-85AE-40F4-ABDC-3814D897A091}|StockPlaform\\StockPlaform.csproj|solutionrelative:stockplaform\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{88A93128-85AE-40F4-ABDC-3814D897A091}|StockPlaform\\StockPlaform.csproj|c:\\users\\shahz\\onedrive\\desktop\\project 2\\backend\\stockplaform\\models\\comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{88A93128-85AE-40F4-ABDC-3814D897A091}|StockPlaform\\StockPlaform.csproj|solutionrelative:stockplaform\\models\\comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{88A93128-85AE-40F4-ABDC-3814D897A091}|StockPlaform\\StockPlaform.csproj|c:\\users\\shahz\\onedrive\\desktop\\project 2\\backend\\stockplaform\\stockplaform.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{88A93128-85AE-40F4-ABDC-3814D897A091}|StockPlaform\\StockPlaform.csproj|solutionrelative:stockplaform\\stockplaform.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
@@ -78,11 +86,35 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CommentMappers.cs",
+              "DocumentMoniker": "C:\\Users\\shahz\\OneDrive\\Desktop\\project 2\\backend\\StockPlaform\\Mappers\\CommentMappers.cs",
+              "RelativeDocumentMoniker": "StockPlaform\\Mappers\\CommentMappers.cs",
+              "ToolTip": "C:\\Users\\shahz\\OneDrive\\Desktop\\project 2\\backend\\StockPlaform\\Mappers\\CommentMappers.cs",
+              "RelativeToolTip": "StockPlaform\\Mappers\\CommentMappers.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-22T16:07:41.256Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CommentDto.cs",
+              "DocumentMoniker": "C:\\Users\\shahz\\OneDrive\\Desktop\\project 2\\backend\\StockPlaform\\Dtos\\Comment\\CommentDto.cs",
+              "RelativeDocumentMoniker": "StockPlaform\\Dtos\\Comment\\CommentDto.cs",
+              "ToolTip": "C:\\Users\\shahz\\OneDrive\\Desktop\\project 2\\backend\\StockPlaform\\Dtos\\Comment\\CommentDto.cs",
+              "RelativeToolTip": "StockPlaform\\Dtos\\Comment\\CommentDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-22T16:04:50.649Z"
             },
             {
               "$type": "Document",
@@ -92,7 +124,7 @@
               "RelativeDocumentMoniker": "StockPlaform\\Controllers\\CommentController.cs",
               "ToolTip": "C:\\Users\\shahz\\OneDrive\\Desktop\\project 2\\backend\\StockPlaform\\Controllers\\CommentController.cs",
               "RelativeToolTip": "StockPlaform\\Controllers\\CommentController.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAAABcAAAAgAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAA6wB8AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-21T23:55:06.027Z",
               "EditorCaption": ""
@@ -100,41 +132,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "CommentRepository.cs",
-              "DocumentMoniker": "C:\\Users\\shahz\\OneDrive\\Desktop\\project 2\\backend\\StockPlaform\\Repositories\\CommentRepository.cs",
-              "RelativeDocumentMoniker": "StockPlaform\\Repositories\\CommentRepository.cs",
-              "ToolTip": "C:\\Users\\shahz\\OneDrive\\Desktop\\project 2\\backend\\StockPlaform\\Repositories\\CommentRepository.cs",
-              "RelativeToolTip": "StockPlaform\\Repositories\\CommentRepository.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAAABgAAAAJAAAAAAAAAA==",
+              "Title": "StockMappers.cs",
+              "DocumentMoniker": "C:\\Users\\shahz\\OneDrive\\Desktop\\project 2\\backend\\StockPlaform\\Mappers\\StockMappers.cs",
+              "RelativeDocumentMoniker": "StockPlaform\\Mappers\\StockMappers.cs",
+              "ToolTip": "C:\\Users\\shahz\\OneDrive\\Desktop\\project 2\\backend\\StockPlaform\\Mappers\\StockMappers.cs",
+              "RelativeToolTip": "StockPlaform\\Mappers\\StockMappers.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-21T23:50:55.848Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ICommentRepository.cs",
-              "DocumentMoniker": "C:\\Users\\shahz\\OneDrive\\Desktop\\project 2\\backend\\StockPlaform\\Interfaces\\ICommentRepository.cs",
-              "RelativeDocumentMoniker": "StockPlaform\\Interfaces\\ICommentRepository.cs",
-              "ToolTip": "C:\\Users\\shahz\\OneDrive\\Desktop\\project 2\\backend\\StockPlaform\\Interfaces\\ICommentRepository.cs",
-              "RelativeToolTip": "StockPlaform\\Interfaces\\ICommentRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-21T23:48:26.424Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "IStockRepository.cs",
-              "DocumentMoniker": "C:\\Users\\shahz\\OneDrive\\Desktop\\project 2\\backend\\StockPlaform\\Interfaces\\IStockRepository.cs",
-              "RelativeDocumentMoniker": "StockPlaform\\Interfaces\\IStockRepository.cs",
-              "ToolTip": "C:\\Users\\shahz\\OneDrive\\Desktop\\project 2\\backend\\StockPlaform\\Interfaces\\IStockRepository.cs",
-              "RelativeToolTip": "StockPlaform\\Interfaces\\IStockRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-21T21:10:42.549Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-18T21:24:39.625Z"
             },
             {
               "$type": "Document",
@@ -144,64 +149,37 @@
               "RelativeDocumentMoniker": "StockPlaform\\Controllers\\StockController.cs",
               "ToolTip": "C:\\Users\\shahz\\OneDrive\\Desktop\\project 2\\backend\\StockPlaform\\Controllers\\StockController.cs",
               "RelativeToolTip": "StockPlaform\\Controllers\\StockController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAAAAAAAAAAAB4AAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-18T19:59:29.933Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\shahz\\OneDrive\\Desktop\\project 2\\backend\\StockPlaform\\Program.cs",
-              "RelativeDocumentMoniker": "StockPlaform\\Program.cs",
-              "ToolTip": "C:\\Users\\shahz\\OneDrive\\Desktop\\project 2\\backend\\StockPlaform\\Program.cs",
-              "RelativeToolTip": "StockPlaform\\Program.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-18T18:03:11.093Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "StockMappers.cs",
-              "DocumentMoniker": "C:\\Users\\shahz\\OneDrive\\Desktop\\project 2\\backend\\StockPlaform\\Mappers\\StockMappers.cs",
-              "RelativeDocumentMoniker": "StockPlaform\\Mappers\\StockMappers.cs",
-              "ToolTip": "C:\\Users\\shahz\\OneDrive\\Desktop\\project 2\\backend\\StockPlaform\\Mappers\\StockMappers.cs",
-              "RelativeToolTip": "StockPlaform\\Mappers\\StockMappers.cs",
-              "ViewState": "AgIAAB0AAAAAAAAAAADwvzUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-18T21:24:39.625Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "UpdateStockRequestDto.cs",
-              "DocumentMoniker": "C:\\Users\\shahz\\OneDrive\\Desktop\\project 2\\backend\\StockPlaform\\Dtos\\Stock\\UpdateStockRequestDto.cs",
-              "RelativeDocumentMoniker": "StockPlaform\\Dtos\\Stock\\UpdateStockRequestDto.cs",
-              "ToolTip": "C:\\Users\\shahz\\OneDrive\\Desktop\\project 2\\backend\\StockPlaform\\Dtos\\Stock\\UpdateStockRequestDto.cs",
-              "RelativeToolTip": "StockPlaform\\Dtos\\Stock\\UpdateStockRequestDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-19T20:01:41.781Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "CreateStockRequestDto.cs",
-              "DocumentMoniker": "C:\\Users\\shahz\\OneDrive\\Desktop\\project 2\\backend\\StockPlaform\\Dtos\\Stock\\CreateStockRequestDto.cs",
-              "RelativeDocumentMoniker": "StockPlaform\\Dtos\\Stock\\CreateStockRequestDto.cs",
-              "ToolTip": "C:\\Users\\shahz\\OneDrive\\Desktop\\project 2\\backend\\StockPlaform\\Dtos\\Stock\\CreateStockRequestDto.cs",
-              "RelativeToolTip": "StockPlaform\\Dtos\\Stock\\CreateStockRequestDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-19T12:56:15.746Z"
+              "WhenOpened": "2025-07-18T19:59:29.933Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
+              "Title": "IStockRepository.cs",
+              "DocumentMoniker": "C:\\Users\\shahz\\OneDrive\\Desktop\\project 2\\backend\\StockPlaform\\Interfaces\\IStockRepository.cs",
+              "RelativeDocumentMoniker": "StockPlaform\\Interfaces\\IStockRepository.cs",
+              "ToolTip": "C:\\Users\\shahz\\OneDrive\\Desktop\\project 2\\backend\\StockPlaform\\Interfaces\\IStockRepository.cs",
+              "RelativeToolTip": "StockPlaform\\Interfaces\\IStockRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-21T21:10:42.549Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ICommentRepository.cs",
+              "DocumentMoniker": "C:\\Users\\shahz\\OneDrive\\Desktop\\project 2\\backend\\StockPlaform\\Interfaces\\ICommentRepository.cs",
+              "RelativeDocumentMoniker": "StockPlaform\\Interfaces\\ICommentRepository.cs",
+              "ToolTip": "C:\\Users\\shahz\\OneDrive\\Desktop\\project 2\\backend\\StockPlaform\\Interfaces\\ICommentRepository.cs",
+              "RelativeToolTip": "StockPlaform\\Interfaces\\ICommentRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-21T23:48:26.424Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "StockDto.cs",
               "DocumentMoniker": "C:\\Users\\shahz\\OneDrive\\Desktop\\project 2\\backend\\StockPlaform\\Dtos\\Stock\\StockDto.cs",
               "RelativeDocumentMoniker": "StockPlaform\\Dtos\\Stock\\StockDto.cs",
@@ -213,7 +191,67 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 5,
+              "Title": "Comment.cs",
+              "DocumentMoniker": "C:\\Users\\shahz\\OneDrive\\Desktop\\project 2\\backend\\StockPlaform\\Models\\Comment.cs",
+              "RelativeDocumentMoniker": "StockPlaform\\Models\\Comment.cs",
+              "ToolTip": "C:\\Users\\shahz\\OneDrive\\Desktop\\project 2\\backend\\StockPlaform\\Models\\Comment.cs",
+              "RelativeToolTip": "StockPlaform\\Models\\Comment.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAAABEAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-18T14:06:13.705Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CommentRepository.cs",
+              "DocumentMoniker": "C:\\Users\\shahz\\OneDrive\\Desktop\\project 2\\backend\\StockPlaform\\Repositories\\CommentRepository.cs",
+              "RelativeDocumentMoniker": "StockPlaform\\Repositories\\CommentRepository.cs",
+              "ToolTip": "C:\\Users\\shahz\\OneDrive\\Desktop\\project 2\\backend\\StockPlaform\\Repositories\\CommentRepository.cs",
+              "RelativeToolTip": "StockPlaform\\Repositories\\CommentRepository.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAAABgAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-21T23:50:55.848Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\shahz\\OneDrive\\Desktop\\project 2\\backend\\StockPlaform\\Program.cs",
+              "RelativeDocumentMoniker": "StockPlaform\\Program.cs",
+              "ToolTip": "C:\\Users\\shahz\\OneDrive\\Desktop\\project 2\\backend\\StockPlaform\\Program.cs",
+              "RelativeToolTip": "StockPlaform\\Program.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-18T18:03:11.093Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "UpdateStockRequestDto.cs",
+              "DocumentMoniker": "C:\\Users\\shahz\\OneDrive\\Desktop\\project 2\\backend\\StockPlaform\\Dtos\\Stock\\UpdateStockRequestDto.cs",
+              "RelativeDocumentMoniker": "StockPlaform\\Dtos\\Stock\\UpdateStockRequestDto.cs",
+              "ToolTip": "C:\\Users\\shahz\\OneDrive\\Desktop\\project 2\\backend\\StockPlaform\\Dtos\\Stock\\UpdateStockRequestDto.cs",
+              "RelativeToolTip": "StockPlaform\\Dtos\\Stock\\UpdateStockRequestDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-19T20:01:41.781Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "CreateStockRequestDto.cs",
+              "DocumentMoniker": "C:\\Users\\shahz\\OneDrive\\Desktop\\project 2\\backend\\StockPlaform\\Dtos\\Stock\\CreateStockRequestDto.cs",
+              "RelativeDocumentMoniker": "StockPlaform\\Dtos\\Stock\\CreateStockRequestDto.cs",
+              "ToolTip": "C:\\Users\\shahz\\OneDrive\\Desktop\\project 2\\backend\\StockPlaform\\Dtos\\Stock\\CreateStockRequestDto.cs",
+              "RelativeToolTip": "StockPlaform\\Dtos\\Stock\\CreateStockRequestDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-19T12:56:15.746Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "readme.txt",
               "DocumentMoniker": "C:\\Users\\shahz\\OneDrive\\Desktop\\project 2\\backend\\StockPlaform\\readme.txt",
               "RelativeDocumentMoniker": "StockPlaform\\readme.txt",
@@ -225,7 +263,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 15,
               "Title": "Stock.cs",
               "DocumentMoniker": "C:\\Users\\shahz\\OneDrive\\Desktop\\project 2\\backend\\StockPlaform\\Models\\Stock.cs",
               "RelativeDocumentMoniker": "StockPlaform\\Models\\Stock.cs",
@@ -237,7 +275,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 14,
               "Title": "ApplicationDBContext.cs",
               "DocumentMoniker": "C:\\Users\\shahz\\OneDrive\\Desktop\\project 2\\backend\\StockPlaform\\Data\\ApplicationDBContext.cs",
               "RelativeDocumentMoniker": "StockPlaform\\Data\\ApplicationDBContext.cs",
@@ -249,7 +287,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 16,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\shahz\\OneDrive\\Desktop\\project 2\\backend\\StockPlaform\\appsettings.json",
               "RelativeDocumentMoniker": "StockPlaform\\appsettings.json",
@@ -261,19 +299,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Comment.cs",
-              "DocumentMoniker": "C:\\Users\\shahz\\OneDrive\\Desktop\\project 2\\backend\\StockPlaform\\Models\\Comment.cs",
-              "RelativeDocumentMoniker": "StockPlaform\\Models\\Comment.cs",
-              "ToolTip": "C:\\Users\\shahz\\OneDrive\\Desktop\\project 2\\backend\\StockPlaform\\Models\\Comment.cs",
-              "RelativeToolTip": "StockPlaform\\Models\\Comment.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAzwBkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-18T14:06:13.705Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 18,
               "Title": "20250718194659_init.cs",
               "DocumentMoniker": "C:\\Users\\shahz\\OneDrive\\Desktop\\project 2\\backend\\StockPlaform\\Migrations\\20250718194659_init.cs",
               "RelativeDocumentMoniker": "StockPlaform\\Migrations\\20250718194659_init.cs",
@@ -285,7 +311,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "StockPlaform.csproj",
               "DocumentMoniker": "C:\\Users\\shahz\\OneDrive\\Desktop\\project 2\\backend\\StockPlaform\\StockPlaform.csproj",
               "RelativeDocumentMoniker": "StockPlaform\\StockPlaform.csproj",

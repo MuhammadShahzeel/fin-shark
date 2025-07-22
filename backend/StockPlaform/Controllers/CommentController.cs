@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using StockPlaform.Interfaces;
+using StockPlaform.Mappers;
 
 namespace StockPlaform.Controllers
 {
@@ -20,8 +21,10 @@ namespace StockPlaform.Controllers
         {
 
 
-            var comments = await _commentRepo.GetAllAsync(); // 
-            return Ok(comments);
+            var comments = await _commentRepo.GetAllAsync(); 
+
+            var commentDto = comments.Select(c => c.ToCommentDto());
+            return Ok(commentDto);
 
 
 
