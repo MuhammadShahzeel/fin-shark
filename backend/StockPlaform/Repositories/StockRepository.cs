@@ -39,16 +39,26 @@ namespace StockPlaform.Repositories
 
         }
 
+        public async Task<bool> ExistsAsync(int id)
+        {
+
+            //use AnyAsync to check if a stock with the given id exists
+            //we use any async because it is more efficient for existence checks
+            //it will return true if it exists, false otherwise not whole object
+            return await _context.Stocks.AnyAsync(i => i.Id == id);
+
+        }
+
         public async Task<List<Stock>> GetAllAsync()
 
         {
-            return await _context.Stocks.ToListAsync();
+            return await _context.Stocks.Include(c=>c.Comments).ToListAsync();
 
         }
 
         public async Task<Stock?> GetByIdAsync(int id)
         {
-            return await _context.Stocks.FindAsync(id);
+            return await _context.Stocks.Include(c => c.Comments).FirstOrDefaultAsync(i=>i.Id==id);
 
         }
 

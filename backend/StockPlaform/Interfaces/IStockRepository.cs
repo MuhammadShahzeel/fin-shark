@@ -13,6 +13,9 @@ namespace StockPlaform.Interfaces
 
         Task<Stock?> DeleteAsync(int id);
 
+        //check stock exists
+        Task<bool> ExistsAsync(int id);
+
     }
 
 }

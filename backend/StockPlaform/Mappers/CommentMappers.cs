@@ -18,5 +18,22 @@ namespace StockPlaform.Mappers
 
             };
         }
+
+        public static Comment ToCommentFromCreateDto(this CreateCommentRequestDto dto, int stockId)
+        {
+            return new Comment
+            {
+                Title = dto.Title,
+                Content = dto.Content,
+        
+                 StockId = stockId 
+
+            };
+
+
+        }
+
+
+
     }
 }

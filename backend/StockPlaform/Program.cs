@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
 using StockPlaform.Data;
 using StockPlaform.Interfaces;
 using StockPlaform.Repositories;
@@ -19,7 +20,10 @@ builder.Services.AddScoped<IStockRepository,StockRepository>();
 // Register the CommentRepository
 builder.Services.AddScoped<ICommentRepository, CommentRepository>();
 
-
+builder.Services.AddControllers().AddNewtonsoftJson(options =>
+{
+    options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
+});
 
 var app = builder.Build();
 
