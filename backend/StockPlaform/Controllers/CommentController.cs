@@ -23,6 +23,10 @@ namespace StockPlaform.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
+            if(!ModelState.IsValid)
+            {
+                return BadRequest(ModelState); // to get all validation errors we provided in dtos
+            }
 
 
             var comments = await _commentRepo.GetAllAsync();
@@ -33,9 +37,14 @@ namespace StockPlaform.Controllers
 
 
         }
-        [HttpGet("{id}")]
+        [HttpGet("{id:int}")]
         public async Task<IActionResult> GetById(int id)
         {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState); // to get all validation errors we provided in dtos
+            }
+
             var comment = await _commentRepo.GetByIdAsync(id);
             if (comment == null)
             {
@@ -47,6 +56,11 @@ namespace StockPlaform.Controllers
         [HttpPost("{stockId}")]
         public async Task<IActionResult> Create(int stockId, [FromBody] CreateCommentRequestDto createDto)
         {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState); // to get all validation errors we provided in dtos
+            }
+
             if (createDto == null)
             {
                 return BadRequest("Invalid comment data.");
@@ -65,6 +79,11 @@ namespace StockPlaform.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> Update(int id, [FromBody] UpdateCommentRequestDto updateDto)
         {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState); // to get all validation errors we provided in dtos
+            }
+
             if (updateDto == null)
             {
                 return BadRequest("Invalid comment data.");
@@ -85,6 +104,11 @@ namespace StockPlaform.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState); // to get all validation errors we provided in dtos
+            }
+
             var commentToDelete = await _commentRepo.DeleteAsync(id);
             if (commentToDelete == null)
             {

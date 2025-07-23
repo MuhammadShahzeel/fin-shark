@@ -25,6 +25,11 @@ namespace StockPlaform.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState); // to get all validation errors we provided in dtos
+            }
+
             var stocks = await _stockRepo.GetAllAsync();
 
 
@@ -37,6 +42,11 @@ namespace StockPlaform.Controllers
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(int id)
         {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState); // to get all validation errors we provided in dtos
+            }
+
             var stock = await _stockRepo.GetByIdAsync(id);
             if (stock == null)
             {
@@ -49,6 +59,11 @@ namespace StockPlaform.Controllers
         [HttpPost]
         public async Task<IActionResult> Create([FromBody] CreateStockRequestDto createDto)
         {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState); // to get all validation errors we provided in dtos
+            }
+
             if (createDto == null)
             {
                 return BadRequest("Invalid stock data.");
@@ -62,6 +77,10 @@ namespace StockPlaform.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> Update(int id, [FromBody] UpdateStockRequestDto updateDto)
         {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState); // to get all validation errors we provided in dtos
+            }
             if (updateDto == null)
                 return BadRequest("Invalid stock data.");
 
@@ -77,6 +96,11 @@ namespace StockPlaform.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState); // to get all validation errors we provided in dtos
+            }
+
 
             var stockToDelete = await _stockRepo.DeleteAsync(id);
             if (stockToDelete == null)
