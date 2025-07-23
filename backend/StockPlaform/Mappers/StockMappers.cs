@@ -38,8 +38,8 @@ namespace StockPlaform.Mappers
 
         }
 
-        //specialdto to update existing 
-        public static void UpdateFromDto(this Stock stockModel, UpdateStockRequestDto dto)
+        //special dto to update existing 
+        public static void UpdateStockFromDto(this Stock stockModel, UpdateStockRequestDto dto)
         {
             stockModel.Symbol = dto.Symbol;
             stockModel.CompanyName = dto.CompanyName;

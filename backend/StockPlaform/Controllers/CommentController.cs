@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using StockPlaform.Dtos.Comment;
+using StockPlaform.Dtos.Stock;
 using StockPlaform.Interfaces;
 using StockPlaform.Mappers;
 
@@ -38,13 +39,13 @@ namespace StockPlaform.Controllers
             var comment = await _commentRepo.GetByIdAsync(id);
             if (comment == null)
             {
-                return NotFound();
+                return NotFound("comment not found");
             }
             return Ok(comment.ToCommentDto());
         }
 
         [HttpPost("{stockId}")]
-        public async Task<IActionResult> Create(int stockId, CreateCommentRequestDto createDto)
+        public async Task<IActionResult> Create(int stockId, [FromBody] CreateCommentRequestDto createDto)
         {
             if (createDto == null)
             {
@@ -59,14 +60,45 @@ namespace StockPlaform.Controllers
             var newComment = createDto.ToCommentFromCreateDto(stockId);
             await _commentRepo.CreateAsync(newComment);
             return CreatedAtAction(nameof(GetById), new { id = newComment.Id }, newComment.ToCommentDto());
-
-
-
-
-
-
-
-
         }
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> Update(int id, [FromBody] UpdateCommentRequestDto updateDto)
+        {
+            if (updateDto == null)
+            {
+                return BadRequest("Invalid comment data.");
+            }
+            var existingComment = await _commentRepo.GetByIdAsync(id);
+            if (existingComment == null)
+            {
+                return NotFound("Comment not found");
+            }
+
+            existingComment.UpdateCommentFromDto(updateDto);
+
+            var updatedComment = await _commentRepo.UpdateAsync(existingComment);
+            return Ok(updatedComment.ToCommentDto());
+        }
+
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete(int id)
+        {
+            var commentToDelete = await _commentRepo.DeleteAsync(id);
+            if (commentToDelete == null)
+            {
+                return NotFound("Comment not found");
+            }
+
+            return NoContent();
+        }
+
+
+      
+
+
+
+
     }
 }

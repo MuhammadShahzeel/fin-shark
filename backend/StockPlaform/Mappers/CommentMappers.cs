@@ -32,6 +32,16 @@ namespace StockPlaform.Mappers
 
 
         }
+        public static void UpdateCommentFromDto(this Comment CommentModel, UpdateCommentRequestDto dto)
+        {
+            CommentModel.Title = dto.Title;
+            CommentModel.Content = dto.Content;
+
+        }
+
+
+
+
 
 
 

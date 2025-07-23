@@ -40,7 +40,7 @@ namespace StockPlaform.Controllers
             var stock = await _stockRepo.GetByIdAsync(id);
             if (stock == null)
             {
-                return NotFound();
+                return NotFound("stock not found");
             }
 
             return Ok(stock.ToStockDto());
@@ -65,14 +65,14 @@ namespace StockPlaform.Controllers
             if (updateDto == null)
                 return BadRequest("Invalid stock data.");
 
-            var stock = await _stockRepo.GetByIdAsync(id);
-            if (stock == null)
-                return NotFound();
+            var existingStock = await _stockRepo.GetByIdAsync(id);
+            if (existingStock == null)
+                return NotFound("Stock not found");
 
-            stock.UpdateFromDto(updateDto);
+            existingStock.UpdateStockFromDto(updateDto);
 
-            var updated = await _stockRepo.UpdateAsync(stock);
-            return Ok(updated.ToStockDto());
+            var updatedStock = await _stockRepo.UpdateAsync(existingStock);
+            return Ok(updatedStock.ToStockDto());
         }
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
@@ -81,11 +81,8 @@ namespace StockPlaform.Controllers
             var stockToDelete = await _stockRepo.DeleteAsync(id);
             if (stockToDelete == null)
             {
-                return NotFound();
+                return NotFound("stock not found");
             }
-
-
-
             return NoContent();
         }
 
