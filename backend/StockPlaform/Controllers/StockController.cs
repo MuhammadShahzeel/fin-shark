@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using StockPlaform.Data;
 using StockPlaform.Dtos.Stock;
+using StockPlaform.Helpers;
 using StockPlaform.Interfaces;
 using StockPlaform.Mappers;
 using System.Collections.Immutable;
@@ -23,14 +24,14 @@ namespace StockPlaform.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetAll()
+        public async Task<IActionResult> GetAll([FromQuery] QueryObject query)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState); // to get all validation errors we provided in dtos
             }
 
-            var stocks = await _stockRepo.GetAllAsync();
+            var stocks = await _stockRepo.GetAllAsync(query);
 
 
             var stockDto = stocks.Select(s => s.ToStockDto());
