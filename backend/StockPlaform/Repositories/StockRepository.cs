@@ -82,7 +82,10 @@ namespace StockPlaform.Repositories
                 }
             }
 
-            return await stocks.ToListAsync();
+            //pagination
+            var skipNumber = (query.PageNumber - 1) * query.PageSize;
+
+            return await stocks.Skip(skipNumber).Take(query.PageSize).ToListAsync();
         }
          
 
