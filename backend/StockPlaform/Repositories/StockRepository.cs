@@ -63,6 +63,25 @@ namespace StockPlaform.Repositories
                 stocks = stocks.Where(s => s.Symbol.Contains(query.Symbol));
 
             }
+
+            if (!string.IsNullOrWhiteSpace(query.SortBy))
+            {
+                if (query.SortBy.Equals("Symbol", StringComparison.OrdinalIgnoreCase))
+                {
+                    stocks = query.IsDescending
+                        ? stocks.OrderByDescending(s => s.Symbol)
+                        : stocks.OrderBy(s => s.Symbol);
+                }
+                //yeh men khud lgayg hy 
+                else if (query.SortBy.Equals("CompanyName", StringComparison.OrdinalIgnoreCase))
+                //ab aapko case-insensitive comparison karna ho, tab StringComparison.OrdinalIgnoreCase use karte hain. eg: apple == Apple
+                {
+                    stocks = query.IsDescending
+                        ? stocks.OrderByDescending(s => s.CompanyName)
+                        : stocks.OrderBy(s => s.CompanyName);
+                }
+            }
+
             return await stocks.ToListAsync();
         }
          
