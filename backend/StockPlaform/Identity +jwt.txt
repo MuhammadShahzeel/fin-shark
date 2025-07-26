@@ -1,0 +1,152 @@
+for identity + jwt authentication in ASP.NET Core
+
+Basic setup
+
+===============================================================================
+GOAL:
+-----
+- User login/register system (using Identity)
+- JWT token issue karna login pe
+- APIs ko secure karna using [Authorize] + JWT
+
+===============================================================================
+Step 1: Install Required Packages
+---------------------------------
+Yeh 3 NuGet packages install karo:
+
+1. Microsoft.Extensions.Identity.Core
+   -> Identity ka base system enable karta hai.
+
+2. Microsoft.AspNetCore.Identity.EntityFrameworkCore
+   -> Identity ko Entity Framework ke saath connect karta hai.
+
+3. Microsoft.AspNetCore.Authentication.JwtBearer
+   -> JWT token ko app mein handle karta hai.
+
+Yeh tino packages **har project mein chahiye hote hain** jab JWT + Identity use kar rahe ho.
+
+===============================================================================
+Step 2: Create AppUser Model
+-----------------------------
+public class AppUser : IdentityUser { }
+
+Matlab: 
+ASP.NET ka built-in `IdentityUser` inherit karna hai aur `AppUser` naam ka apna custom user class banana hai.  
+Custom fields future mein yahan add kar sakte ho (e.g. FullName, Role, etc.).
+
+Yeh step har project mein hota hai.
+
+===============================================================================
+Step 3: Modify ApplicationDbContext
+-----------------------------------
+Replace:
+    public class ApplicationDbContext : DbContext
+
+With:
+    public class ApplicationDbContext : IdentityDbContext<AppUser>
+
+Matlab:
+Ab aapka database sirf Stocks, Comments jese models nahi, balkay Identity ke Users, Roles, Tokens waghera bhi handle karega.
+
+===============================================================================
+Step 4: Configure Identity + JWT in Program.cs
+----------------------------------------------
+
+1. Identity Configuration:
+
+builder.Services.AddIdentity<AppUser, IdentityRole>(options =>
+{
+    options.Password.RequireDigit = true;
+    options.Password.RequiredLength = 12;
+})
+.AddEntityFrameworkStores<ApplicationDbContext>();
+
+Yeh Identity service ko enable karta hai aur batata hai ke data store kaha hoga (ApplicationDbContext).
+
+2. JWT Configuration:
+
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+})
+.AddJwtBearer(options =>
+{
+    options.TokenValidationParameters = new TokenValidationParameters
+    {
+        ValidateIssuer = true,
+        ValidIssuer = builder.Configuration["JWT:Issuer"],
+        ValidateAudience = true,
+        ValidAudience = builder.Configuration["JWT:Audience"],
+        ValidateIssuerSigningKey = true,
+        IssuerSigningKey = new SymmetricSecurityKey(
+            Encoding.UTF8.GetBytes(builder.Configuration["JWT:Key"]))
+    };
+});
+
+Matlab:
+Yeh batata hai ke JWT token kaise validate hoga:
+- Kon bana raha hai token? (Issuer)
+- Kon use kar raha hai? (Audience)
+- Kya token sahi se sign hua hai? (Key)
+
+===============================================================================
+Step 5: appsettings.json mein JWT section add karo
+---------------------------------------------------
+"JWT": {
+  "Key": "swordfish", your jwt secret
+  "Issuer": "https://localhost:7165", or your domain name
+  "Audience": "https://localhost:7165"
+}
+
+Yeh woh config values hain jo JWT token generate aur validate karte waqt use hoti hain. 
+Yeh values tumhare project ke hisaab se change hongi.
+
+===============================================================================
+Step 6: Add Middleware in Program.cs
+-------------------------------------
+app.UseAuthentication();
+app.UseAuthorization();
+
+Matlab:
+Har incoming request ke liye pehle check hoga ke user JWT token ke through authenticated hai ya nahi, 
+phir uske authorization rights dekhe jayenge.
+
+===============================================================================
+Step 7: Create Migration and Update Database
+--------------------------------------------
+Command Line se:
+> dotnet ef migrations add InitialIdentityMigration
+> dotnet ef database update
+
+Ya Visual Studio ke Package Manager Console se:
+> Add-Migration InitialIdentityMigration
+> Update-Database
+
+Matlab:
+Yeh step sab required Identity aur tumhare custom tables ko DB mein create karta hai.
+
+===============================================================================
+Summary: Reusable vs Custom Code
+---------------------------------
+
+REUSABLE (Har Project mein reuse hota hai):
+- Identity & JWT packages
+- AppUser class (structure same, fields may change)
+- IdentityDbContext usage
+- Identity & JWT setup in Program.cs
+- app.UseAuthentication(), app.UseAuthorization()
+- Migration flow
+
+PROJECT-SPECIFIC (Har Project mein alag hota hai):
+- JWT key, issuer, audience (appsettings.json)
+- AppUser custom properties (like FullName)
+- Password policy configuration
+- Tumhare models jaise Stock, Comment etc.
+
+
+
+
+
+
+
