@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("StockPlaform")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4ddaff69895fec6fc4310e882a4185c4310d8a2c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+111dfbbf31aafe7270dbf7fa23dc3b00365d2111")]
 [assembly: System.Reflection.AssemblyProductAttribute("StockPlaform")]
 [assembly: System.Reflection.AssemblyTitleAttribute("StockPlaform")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

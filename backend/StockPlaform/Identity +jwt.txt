@@ -1,4 +1,4 @@
-for identity + jwt authentication in ASP.NET Core
+﻿for identity + jwt authentication in ASP.NET Core
 
 Basic setup
 
@@ -143,6 +143,104 @@ PROJECT-SPECIFIC (Har Project mein alag hota hai):
 - AppUser custom properties (like FullName)
 - Password policy configuration
 - Tumhare models jaise Stock, Comment etc.
+
+
+
+
+===============================================================================
+ASP.NET Core Web API – Identity + JWT (AccountController Setup + Roles) 
+---------------------------------
+
+Register & Login ke liye controller banao
+
+step 1:  
+create new controller eg: Account controller  
+🔹 Yahan hum ek naya controller bana rahe hain jiska naam AccountController hoga. Ye controller register aur login ka kaam karega.
+
+step 2:  
+inject the usermodel like below  
+
+public class AccountController : ControllerBase
+{
+    private readonly UserManager<AppUser> _userManager;
+
+    public AccountController(UserManager<AppUser> userManager)
+    {
+        _userManager = userManager;
+    }
+}
+
+- Yahan hum Identity ka UserManager<AppUser> inject kar rahe hain jo user create, delete, find jaise operations handle karta hai.  
+- AppUser tumhara custom user model hai jo IdentityUser se inherit karta hai.  
+- <AppUser> -> tumhara user model  
+- UserManager -> Identity ka built-in helper class jo user related logic handle karta hai
+
+step 3:  
+add post routes  
+-> you can use dtos , go and create dtos and use in AccountController.cs  
+-> check AccountController.cs for details  
+-> check Account > RegisterRequestDto.cs for details  
+-> check Mappers > AccountMappers.cs for details  
+
+- Yahan tum controller mein POST method banaoge jisme user registration ya login ka logic hoga.  
+- Hum DTOs ka use karte hain taake request aur response ko model se separate rakhein — cleaner aur reusable banane ke liye.  
+- RegisterRequestDto ek class hai jo registration request ka data hold karegi (jaise email, username, password).
+
+step 4:  
+define roles  
+-> we are using roles becauses we want to restrict access to some apis if we not use roles anyone can access all apis  
+-> because in program.cs we define roles IdentityRole so we need to create roles  
+
+- Yahan hum roles define kar rahe hain (User, Admin, Manager) taake har user ko specific access mil sake.  
+- Har koi har API access na kar sake is wajah se roles use karna important hota hai.  
+- Program.cs mein hum ne AddIdentity<AppUser, IdentityRole>() likha tha, to humein IdentityRole ke roles bhi create karne padenge.
+
+-> in ApplicationDbContext.cs Seed Roles
+
+protected override void OnModelCreating(ModelBuilder builder)
+{
+    base.OnModelCreating(builder);
+
+    var roles = new List<IdentityRole>
+    {
+        new IdentityRole
+        {
+            Name = "User",
+            NormalizedName = "USER"
+        },
+        new IdentityRole
+        {
+            Name = "Admin",
+            NormalizedName = "ADMIN"
+        }
+    };
+
+    builder.Entity<IdentityRole>().HasData(roles);
+}
+
+- Yeh code ApplicationDbContext mein likhna hota hai. Yeh Seed ka kaam karega — yani pehle se DB mein 3 roles add kar dega: User, Admin, Manager.  
+- HasData() ka matlab hota hai ke yeh data migration ke through DB mein seed ho jayega.
+
+step 4:  
+migrations to seed  
+
+> dotnet ef migrations add SeedRoles  
+> dotnet ef database update  
+// or in Visual Studio Package Manager Console  
+> Add-Migration SeedRoles  
+> Update-Database
+
+- Ab jab roles ka code likh liya hai, usko database mein apply karne ke liye Migration banani hogi.  
+- Migration ka matlab hota hai database ko update karne ka process taake naye roles add ho jayein.
+
+step 5:  
+add users using swagger  
+
+- Ab tum Swagger se POST /api/account/register ka use karke naye users bana sakte ho, jinko roles assign ho sakte hain.  
+
+step 6:
+- check kro kya roles sahi se assign hue hain ya nahi.
+-users aye dbo.AspNetUsers
 
 
 

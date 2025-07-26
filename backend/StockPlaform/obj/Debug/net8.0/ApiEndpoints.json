@@ -1,5 +1,21 @@
 [
   {
+    "ContainingType": "StockPlaform.Controllers.AccountController",
+    "Method": "Register",
+    "RelativePath": "api/account/register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "registerDto",
+        "Type": "StockPlaform.Dtos.Account.RegisterRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "StockPlaform.Controllers.CommentController",
     "Method": "GetAll",
     "RelativePath": "api/comment",
