@@ -17,5 +17,14 @@ namespace StockPlaform.Mappers
                 // dont use Password here, it will be set by UserManager in controller because it hased and salted automatically
             };
         }
+        public static NewUserDto ToNewUserDto(this AppUser user, string token)
+        {
+            return new NewUserDto
+            {
+                UserName = user.UserName,
+                Email = user.Email,
+                Token = token
+            };
+        }
     }
 }

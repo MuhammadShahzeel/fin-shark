@@ -7,6 +7,7 @@ using StockPlaform.Data;
 using StockPlaform.Interfaces;
 using StockPlaform.Models;
 using StockPlaform.Repositories;
+using StockPlaform.Services;
 using System;
 using System.Text;
 
@@ -25,6 +26,10 @@ builder.Services.AddDbContext<ApplicationDBContext>(options =>
 builder.Services.AddScoped<IStockRepository,StockRepository>();
 // Register the CommentRepository
 builder.Services.AddScoped<ICommentRepository, CommentRepository>();
+
+
+// register Token service
+builder.Services.AddScoped<ITokenService, TokenService>();
 
 builder.Services.AddControllers().AddNewtonsoftJson(options =>
 {

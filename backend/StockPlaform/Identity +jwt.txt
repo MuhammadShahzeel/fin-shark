@@ -245,6 +245,83 @@ step 6:
 
 
 
+--------------------------------------------------------
+now create claims for jwt token 
+
+JWT Claims – Simple Explanation
+
+📌 What are Claims?
+Claims = JWT token ke andar chhupi user info.
+API ko batata hai: ye user kaun hai, kya kar sakta hai.
+
+Example Claims (token ke andar):
+{
+  "sub": "a1b2c3",              // user id
+  "email": "user@gmail.com",
+  "role": "Admin",
+  "FullName": "Shazeel Khan",
+  "exp": 1720000000             // expiry time
+}
+
+ Common Claims:
+- sub       → Subject (User ID)
+- email     → User’s email
+- role      → User’s role (Admin/User)
+- exp       → Expiry timestamp
+- FullName  → (Custom) User's name
+
+JWT Flow with Claims:
+1. Login → user verified
+2. List<Claim> banti hai
+3. JWT token generate hota hai with claims
+4. Client ko token milta hai
+5. Har request mein token bheja jata hai
+6. API token read karke access verify karti hai
 
 
+📦 Repository → sirf database ka kaam karta hai (CRUD).  
+⚙️ Service → business logic handle karta hai (login, register, JWT, roles).  
+Repository = data uthana/saving  
+Service = decision lena, process karna 
 
+--------------------------------------------------------
+step 1: create interface for service
+check ITokenService.cs for details inside it we create a method to create token
+
+step 2: create service class
+check TokenService.cs for details
+inhertit ITokenService and implement the method to create token
+
+step:3 
+// register Token service in program.cs via DI
+builder.Services.AddScoped<ITokenService, TokenService>();
+
+step 4:  create dto
+check Dtos> Account> NewUserDto.cs for Details
+
+step 5: inject ItokenService in AccountController.cs
+
+step 6: cretae mapper 
+ public static NewUserDto ToNewUserDto(this AppUser user, string token)
+        {
+            return new NewUserDto
+            {
+                UserName = user.UserName,
+                Email = user.Email,
+                Token = token
+            };
+        }
+step 7: use mapper in controller 
+if (roleResult.Succeeded)
+                    {
+                        // Generate JWT token for the new user
+                        var token =  _tokenService.CreateToken(appUser);
+
+                        // Use mapper to convert to NewUserDto
+                        var newUserDto = appUser.ToNewUserDto(token);
+
+                        return Ok(newUserDto);
+                    }
+
+step 8: test now in 
+/api/account/register it should return token

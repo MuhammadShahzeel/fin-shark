@@ -4,7 +4,8 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using StockPlaform.Dtos.Account;   
+using StockPlaform.Dtos.Account;
+using StockPlaform.Interfaces;
 using StockPlaform.Mappers;        
 using StockPlaform.Models;       
 using System.ComponentModel.DataAnnotations;
@@ -18,11 +19,13 @@ namespace StockPlaform.Controllers
     {
         // Identity ka UserManager<AppUser> inject ho raha hai – yeh object users create/update/delete waghera karta hai
         private readonly UserManager<AppUser> _userManager;
+        private readonly ITokenService _tokenService;
 
         // Constructor injection – UserManager ko controller ke andar available banaya gaya
-        public AccountController(UserManager<AppUser> userManager)
+        public AccountController(UserManager<AppUser> userManager,ITokenService tokenService)
         {
             _userManager = userManager;
+            _tokenService = tokenService;
         }
 
         // POST endpoint: /api/account/register – yeh new user register karega
@@ -53,7 +56,13 @@ namespace StockPlaform.Controllers
                     // Agar role bhi assign ho gaya to success message bhej do
                     if (roleResult.Succeeded)
                     {
-                        return Ok("User created successfully.");
+                        // Generate JWT token for the new user
+                        var token =  _tokenService.CreateToken(appUser);
+
+                        // Use mapper to convert to NewUserDto
+                        var newUserDto = appUser.ToNewUserDto(token);
+
+                        return Ok(newUserDto);
                     }
                     else
                     {
