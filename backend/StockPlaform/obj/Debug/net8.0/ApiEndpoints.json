@@ -1,6 +1,22 @@
 [
   {
     "ContainingType": "StockPlaform.Controllers.AccountController",
+    "Method": "Login",
+    "RelativePath": "api/account/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "loginDto",
+        "Type": "StockPlaform.Dtos.Account.LoginRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "StockPlaform.Controllers.AccountController",
     "Method": "Register",
     "RelativePath": "api/account/register",
     "HttpMethod": "POST",

@@ -26,5 +26,14 @@ namespace StockPlaform.Mappers
                 Token = token
             };
         }
+        public static NewUserDto ToLoginUserDto(this AppUser user, string token)
+        {
+            return new NewUserDto
+            {
+                UserName = user.UserName,
+                Email = user.Email,
+                Token = token
+            };
+        }
     }
 }

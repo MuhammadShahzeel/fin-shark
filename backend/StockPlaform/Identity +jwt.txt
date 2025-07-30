@@ -325,3 +325,60 @@ if (roleResult.Succeeded)
 
 step 8: test now in 
 /api/account/register it should return token
+
+
+--------------------------------------------------------
+now create login functionality 
+step 1: create dto for login
+check Dtos > Account > LoginRequestDto.cs for details
+
+step 2: add login method in AccountController.cs
+check AccountController.cs for details
+step 3: inject SignInManager in AccountController.cs
+
+step 4: create dto check Dtos > Account > LoginResponseDto.cs for details
+step 5: use mapper to convert to LoginResponseDto
+check Mappers > AccountMappers.cs for details
+step 6: put swagger configuration in Program.cs for jwt
+
+builder.Services.AddSwaggerGen(option =>
+{
+    option.SwaggerDoc("v1", new OpenApiInfo { Title = "Demo API", Version = "v1" });
+    option.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+    {
+        In = ParameterLocation.Header,
+        Description = "Please enter a valid token",
+        Name = "Authorization",
+        Type = SecuritySchemeType.Http,
+        BearerFormat = "JWT",
+        Scheme = "Bearer"
+    });
+    option.AddSecurityRequirement(new OpenApiSecurityRequirement
+    {
+        {
+            new OpenApiSecurityScheme
+            {
+                Reference = new OpenApiReference
+                {
+                    Type=ReferenceType.SecurityScheme,
+                    Id="Bearer"
+                }
+            },
+            new string[]{}
+        }
+    });
+});
+
+
+a authorize button in swagger to test login
+
+step 7: put [Authorize] attribute on the controller or specific methods you want to secure
+step 8: testing 
+ -> create account using register api
+ -> login using login api it will give you token 
+ -> copy that token
+ -> go to swagger and click on authorize button
+ -> paste the token in the input field
+ -> now you can access the secured APIs
+ note if you [Authorize] secured API without token it will give you 401 unauthorized error
+

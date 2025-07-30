@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using StockPlaform.Dtos.Account;
 using StockPlaform.Interfaces;
 using StockPlaform.Mappers;        
@@ -20,12 +21,15 @@ namespace StockPlaform.Controllers
         // Identity ka UserManager<AppUser> inject ho raha hai – yeh object users create/update/delete waghera karta hai
         private readonly UserManager<AppUser> _userManager;
         private readonly ITokenService _tokenService;
+        private readonly SignInManager<AppUser> _signInManager;
 
         // Constructor injection – UserManager ko controller ke andar available banaya gaya
-        public AccountController(UserManager<AppUser> userManager,ITokenService tokenService)
+        public AccountController(UserManager<AppUser> userManager, ITokenService tokenService,
+            SignInManager<AppUser> signInManager)
         {
             _userManager = userManager;
             _tokenService = tokenService;
+            _signInManager = signInManager;
         }
 
         // POST endpoint: /api/account/register – yeh new user register karega
@@ -57,7 +61,7 @@ namespace StockPlaform.Controllers
                     if (roleResult.Succeeded)
                     {
                         // Generate JWT token for the new user
-                        var token =  _tokenService.CreateToken(appUser);
+                        var token = _tokenService.CreateToken(appUser);
 
                         // Use mapper to convert to NewUserDto
                         var newUserDto = appUser.ToNewUserDto(token);
@@ -87,6 +91,35 @@ namespace StockPlaform.Controllers
             catch (Exception e)
             {
                 // Agar koi unexpected error aa jaye (runtime error), to usko handle karo aur 500 return karo
+                return StatusCode(500, e);
+            }
+        }
+
+
+        // POST endpoint: /api/account/login – yeh user ko login karega
+        [HttpPost("login")]
+        public async Task<IActionResult> Login([FromBody] LoginRequestDto loginDto)
+        {
+            try
+            {
+                if (!ModelState.IsValid)
+                    return BadRequest(ModelState);
+                var user = await _userManager.Users.FirstOrDefaultAsync(x => x.UserName == loginDto.UserName.ToLower());
+                if (user == null)
+                    return Unauthorized("Invalid username or password");
+                var result = await _signInManager.CheckPasswordSignInAsync(user, loginDto.Password, false);
+                if (!result.Succeeded)
+                {
+                    return Unauthorized("Invalid username or password");
+                }
+                var token = _tokenService.CreateToken(user);
+
+                // Use mapper for login response
+                var userDto = user.ToLoginUserDto(token);
+                return Ok(userDto);
+            }
+            catch (Exception e)
+            {
                 return StatusCode(500, e);
             }
         }
