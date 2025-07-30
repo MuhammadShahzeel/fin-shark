@@ -3,6 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace StockPlaform.Models
 {
+    [Table("Stocks")] // Ye table ka naam hai jo database mein banegas
     public class Stock
     {
       
@@ -24,6 +25,10 @@ namespace StockPlaform.Models
         //one to many relationship 
         //a Stock has many comments
 
+        public List<Portfolio> Portfolios { get; set; } = new List<Portfolio>();
+        //Ye line batati hai ke ek Stock multiple Portfolios mein ho sakta hai
+        // one to many relationship
+        //Ek Stock ke paas multiple Portfolio items ho sakte hain
 
 
 

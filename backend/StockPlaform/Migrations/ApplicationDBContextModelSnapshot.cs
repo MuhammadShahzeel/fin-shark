@@ -51,19 +51,19 @@ namespace StockPlaform.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "08cf0c38-e215-427a-a0cb-fe3f86e4bb8c",
+                            Id = "b3966553-2719-4dec-b56a-5b544d02d892",
                             Name = "User",
                             NormalizedName = "USER"
                         },
                         new
                         {
-                            Id = "ed29f24c-5fa0-410c-9c34-1203b9211822",
+                            Id = "35e16eac-ee9d-45aa-b140-f3cce3ca5d54",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
-                            Id = "cbc2b995-b12e-406e-a644-d22f01981f11",
+                            Id = "fc93fa71-c062-46d2-8da3-d1d48936204e",
                             Name = "Manager",
                             NormalizedName = "MANAGER"
                         });
@@ -269,6 +269,21 @@ namespace StockPlaform.Migrations
                     b.ToTable("Comments");
                 });
 
+            modelBuilder.Entity("StockPlaform.Models.Portfolio", b =>
+                {
+                    b.Property<string>("AppUserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("StockId")
+                        .HasColumnType("int");
+
+                    b.HasKey("AppUserId", "StockId");
+
+                    b.HasIndex("StockId");
+
+                    b.ToTable("Portfolios");
+                });
+
             modelBuilder.Entity("StockPlaform.Models.Stock", b =>
                 {
                     b.Property<int>("Id")
@@ -363,9 +378,35 @@ namespace StockPlaform.Migrations
                     b.Navigation("Stock");
                 });
 
+            modelBuilder.Entity("StockPlaform.Models.Portfolio", b =>
+                {
+                    b.HasOne("StockPlaform.Models.AppUser", "AppUser")
+                        .WithMany("Portfolios")
+                        .HasForeignKey("AppUserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("StockPlaform.Models.Stock", "Stock")
+                        .WithMany("Portfolios")
+                        .HasForeignKey("StockId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("AppUser");
+
+                    b.Navigation("Stock");
+                });
+
+            modelBuilder.Entity("StockPlaform.Models.AppUser", b =>
+                {
+                    b.Navigation("Portfolios");
+                });
+
             modelBuilder.Entity("StockPlaform.Models.Stock", b =>
                 {
                     b.Navigation("Comments");
+
+                    b.Navigation("Portfolios");
                 });
 #pragma warning restore 612, 618
         }

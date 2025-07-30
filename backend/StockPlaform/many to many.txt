@@ -1,0 +1,36 @@
+one to many limitations 
+-> we only have one stock pe platform for many users 
+-> One-to-many relationship sirf us case mein kaam karta hai jab ek entity (jaise Stock) multiple entities (Users) se linked ho, lekin reverse allowed nahi hota. Iska matlab hai ke ek User sirf ek Stock se linked ho sakta hai, multiple se nahi — is wajah se jab mutual or shared association chahiye ho (e.g. ek user ke multiple stocks ho aur ek stock ke multiple users), to yeh model fail ho jata hai.
+
+Many-to-many relationship allow karti hai ke ek user multiple stocks own kare aur ek stock multiple users ke paas ho. Porfolio join table iss association ko represent karta hai using AppUserId and StockId foreign keys.
+
+step 1: create model Porfolio 
+-> check Models > Porfolio.cs for details
+
+step 2: inside AppUser.cs add Porfolio List also in Stock.cs add Porfolio List
+-> check Models > AppUser.cs and Models > Stock.cs for details
+
+step 3: add this in ApplicationDbContext.cs
+public DbSet<Portfolio> Portfolios { get; set; } //use to create Portfolio table in database
+->also add this in OnModelCreating method
+builder.Entity<Portfolio>(x=> x.HasKey(p=> new {p.AppUserId,p.StockId}));
+->also add this in OnModelCreating method
+builder.Entity<Portfolio>()
+    .HasOne(u => u.AppUser)                  
+    .WithMany(u => u.Portfolios)            
+    .HasForeignKey(p => p.AppUserId);   
+step 4:
+delete migrations folder and database from sql server
+it is good because we change some db names and many to manny relationship etc 
+
+step 5:
+run command in terminal
+// dotnet ef migrations add InitialCreate
+// dotnet ef database update
+or in package manager console
+// Add-Migration PortfolioManyToMany
+
+// Update-Database
+    
+
+

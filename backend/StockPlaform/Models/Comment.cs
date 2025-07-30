@@ -1,9 +1,11 @@
 ﻿using Microsoft.AspNetCore.DataProtection.KeyManagement;
 using Microsoft.AspNetCore.Http.HttpResults;
+using System.ComponentModel.DataAnnotations.Schema;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace StockPlaform.Models
 {
+    [Table("Comments")] // Ye table ka naam hai jo database mein banega
     public class Comment
     {
         public int Id { get; set; }
