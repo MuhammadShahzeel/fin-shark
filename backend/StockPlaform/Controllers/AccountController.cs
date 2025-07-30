@@ -1,29 +1,21 @@
-﻿// Required libraries import ki ja rahi hain jo Identity, MVC, DTOs, Models etc. handle karti hain
-using Microsoft.AspNetCore.DataProtection;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Http.HttpResults;
-using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using StockPlaform.Dtos.Account;
 using StockPlaform.Interfaces;
-using StockPlaform.Mappers;        
-using StockPlaform.Models;       
-using System.ComponentModel.DataAnnotations;
+using StockPlaform.Mappers;
+using StockPlaform.Models;
 
 namespace StockPlaform.Controllers
 {
-
     [Route("api/account")]
     [ApiController]
     public class AccountController : ControllerBase
     {
-        // Identity ka UserManager<AppUser> inject ho raha hai – yeh object users create/update/delete waghera karta hai
-        private readonly UserManager<AppUser> _userManager;
-        private readonly ITokenService _tokenService;
-        private readonly SignInManager<AppUser> _signInManager;
+        private readonly UserManager<AppUser> _userManager;       // User create/update/delete
+        private readonly ITokenService _tokenService;             // JWT token generate karta hai
+        private readonly SignInManager<AppUser> _signInManager;   // Login aur password check karta hai
 
-        // Constructor injection – UserManager ko controller ke andar available banaya gaya
         public AccountController(UserManager<AppUser> userManager, ITokenService tokenService,
             SignInManager<AppUser> signInManager)
         {
@@ -32,95 +24,91 @@ namespace StockPlaform.Controllers
             _signInManager = signInManager;
         }
 
-        // POST endpoint: /api/account/register – yeh new user register karega
+        // ============================
+        // ======= REGISTER USER ======
+        // ============================
         [HttpPost("register")]
         public async Task<IActionResult> Register([FromBody] RegisterRequestDto registerDto)
         {
             try
             {
-                // 1. Check kar rahe hain ke jo data frontend sy aya hai wo valid hai ya nahi (ModelState)
                 if (!ModelState.IsValid)
-                {
-                    // Agar koi validation error hai (e.g. required fields missing), to BadRequest return kar do
-                    return BadRequest(ModelState);
-                }
+                    return BadRequest(ModelState); // Input validation fail ho gayi
 
-                // 2. DTO ko AppUser object mein convert kar rahe hain custom mapper function ke zariye (ToAppUser())
-                var appUser = registerDto.ToAppUser();
+                var appUser = registerDto.ToAppUser(); // DTO ko AppUser mein convert kiya
 
-                // 3. Identity ke method sy user ko database mein create kar rahe hain, password ke sath
-                var createdUser = await _userManager.CreateAsync(appUser, registerDto.Password);
+                var createdUser = await _userManager.CreateAsync(appUser, registerDto.Password); // User create kiya
 
-                // 4. Agar user successfully create ho gaya
                 if (createdUser.Succeeded)
                 {
-                    // Us user ko "User" role assign kar rahe hain
-                    var roleResult = await _userManager.AddToRoleAsync(appUser, "User");
+                    var roleResult = await _userManager.AddToRoleAsync(appUser, "User"); // "User" role assign kiya
 
-                    // Agar role bhi assign ho gaya to success message bhej do
                     if (roleResult.Succeeded)
                     {
-                        // Generate JWT token for the new user
-                        var token = _tokenService.CreateToken(appUser);
-
-                        // Use mapper to convert to NewUserDto
-                        var newUserDto = appUser.ToNewUserDto(token);
-
-                        return Ok(newUserDto);
+                        var token = _tokenService.CreateToken(appUser); // JWT token banaya
+                        var newUserDto = appUser.ToNewUserDto(token);   // DTO banaya response ke liye
+                        return Ok(newUserDto);                          // 200 OK response with token
                     }
                     else
                     {
-                        // Agar role assign karte waqt koi error aya to 500 Internal Server Error ke sath error details return karo
-                        return StatusCode(500, roleResult.Errors);
+                        return StatusCode(500, roleResult.Errors); // Role assign mein error
                     }
                 }
                 else
                 {
-                    // Agar user creation fail ho gaya to error detail return karo
-                    return StatusCode(500, createdUser.Errors);
+                    return StatusCode(500, createdUser.Errors); // User create nahi ho saka
                 }
-
-                // ---------- Yeh neeche wali comments general flow ko describe kar rahi hain ----------
-                // 1. Identity internally username/email validate karta hai
-                // 2. Password rules check karta hai (jo tum program.cs mein set karte ho)
-                // 3. Password ko hash karta hai (secure storage ke liye)
-                // 4. DB mein user insert karta hai
-                // 5. Agar success ho to appUser.Succeeded true hota hai
-                // 6. Agar koi error ho to appUser.Errors mein detail milti hai
             }
             catch (Exception e)
             {
-                // Agar koi unexpected error aa jaye (runtime error), to usko handle karo aur 500 return karo
-                return StatusCode(500, e);
+                return StatusCode(500, e); // Unexpected error handle
             }
         }
 
-
-        // POST endpoint: /api/account/login – yeh user ko login karega
+        // ============================
+        // ========= LOGIN USER =======
+        // ============================
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] LoginRequestDto loginDto)
         {
             try
             {
                 if (!ModelState.IsValid)
-                    return BadRequest(ModelState);
+                    return BadRequest(ModelState); // Input validation fail ho gayi
+
+                // Username ke zariye user find karo
                 var user = await _userManager.Users.FirstOrDefaultAsync(x => x.UserName == loginDto.UserName.ToLower());
+
                 if (user == null)
-                    return Unauthorized("Invalid username or password");
+                    return Unauthorized("Invalid username or password"); // User exist nahi karta
+
+                // Password check karo Identity system se
                 var result = await _signInManager.CheckPasswordSignInAsync(user, loginDto.Password, false);
+
+                /*
+                   is line ka deep meaning:
+                   - yeh method verify karta hai ke password sahi hai ya nahi
+                   - user ka jo password frontend se aaya (plain text) wo
+                     database ke andar stored hashed password ke sath match kiya jata hai
+                   - agar match ho gaya to result.Succeeded = true
+                   - agar nahi match hua to result.Succeeded = false
+                   - 3rd parameter "false" ka matlab: lockoutOnFailure = false
+                     → agar user galat password de to lockout attempt count na karo
+                */
+
                 if (!result.Succeeded)
                 {
-                    return Unauthorized("Invalid username or password");
+                    return Unauthorized("Invalid username or password"); // Password match nahi hua
                 }
-                var token = _tokenService.CreateToken(user);
 
-                // Use mapper for login response
-                var userDto = user.ToLoginUserDto(token);
-                return Ok(userDto);
+                var token = _tokenService.CreateToken(user); // Token generate karo
+
+                var userDto = user.ToLoginUserDto(token);    // DTO banayo login response ke liye
+                return Ok(userDto);                          // 200 OK with token
             }
             catch (Exception e)
             {
-                return StatusCode(500, e);
+                return StatusCode(500, e); // Koi bhi runtime error
             }
         }
     }
