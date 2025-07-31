@@ -42,7 +42,7 @@ inject IPortfolioRepository and UserManager in constructor because in jon table 
 
 // check Controllers > PortfolioController.cs for details
 
-step 2: add GetAll method in PortfolioController
+step 2: add GetUserPortfolioAsync method in PortfolioController
 // check Controllers > PortfolioController.cs for details
 
 step 3: createfolder Extensions > ClaimsExtensions.cs
@@ -74,6 +74,35 @@ in program .cs  add this line for DI
 builder.Services.AddScoped<IPortfolioRepository, PortfolioRepository>();
 step 8: testing
 route : api/portfolio to test
+
+
+---------------------------------------------------------------------------
+CREATE
+how cretae works in many to many 
+
+we need to create Portfolio which is join table and contains UserId and StockId
+
+so,
+
+-> fiind User and Stock
+-> create Portfolio object with StockId and UserId
+-> save in db 
+
+step 1: create AddPortfolio method in PortfolioController.cs
+// check Controllers > PortfolioController.cs for details
+
+step 2: add GetAsync method in IPortfolioRepository.cs
+// check Interfaces > IPortfolioRepository.cs for details
+step 3: implement GetAsync method in PortfolioRepository.cs
+// check Repositories > PortfolioRepository.cs for details
+
+step 4: testing 
+route : api/portfolio/ POST
+
+-> add portfolio by symbol make sure the stock exists in database with same symbol
+
+
+
 
 
 

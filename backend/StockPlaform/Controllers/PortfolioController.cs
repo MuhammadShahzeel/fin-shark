@@ -13,7 +13,7 @@ namespace StockPlaform.Controllers
     public class PortfolioController : ControllerBase
     {
         private readonly UserManager<AppUser> _userManager;
-        private readonly IStockRepository _stockRepository;
+        private readonly IStockRepository _stockRepo;
         private readonly IPortfolioRepository _portfolioRepo;
 
         public PortfolioController(
@@ -23,7 +23,7 @@ namespace StockPlaform.Controllers
             IPortfolioRepository portfolioRepo)
         {
             _userManager = userManager;
-            _stockRepository = stockRepository;
+            _stockRepo = stockRepository;
             _portfolioRepo = portfolioRepo;
         }
 
@@ -43,6 +43,57 @@ namespace StockPlaform.Controllers
             var UserPortfolio = await _portfolioRepo.GetUserPortfolioAsync(appUser);
 
             return Ok(UserPortfolio);
+
+
+        }
+
+        [HttpPost]
+        [Authorize]
+        public async Task<IActionResult> AddPortfolio(string symbol)
+        {
+            //find user from JWT token claims
+            var username = User.GetUsername();
+
+            
+            //  Identity system ka UserManager use karke user ko database se find karna
+            var appUser = await _userManager.FindByNameAsync(username);
+
+            // find stock by symbol
+            var stock = await _stockRepo.GetBySymbolAsync(symbol);
+
+            if (stock == null)
+            {
+                return NotFound("Stock not found");
+            }
+
+            // Get the user's portfolio
+            var userPortfolio = await _portfolioRepo.GetUserPortfolioAsync(appUser);
+
+            // Check if the stock already exists in the user's portfolio
+            if (userPortfolio.Any(s => s.Symbol.ToLower() == symbol.ToLower()))
+            {
+                return BadRequest("Stock already exists in your portfolio can't add same stock");
+            }
+            // Create a new portfolio item
+            var portfolioModel = new Portfolio
+            {
+                AppUserId = appUser.Id,
+                StockId = stock.Id,
+            };
+            // Save the portfolio item to the database
+           await _portfolioRepo.GetAsync(portfolioModel);
+
+            if (portfolioModel == null)
+            {
+                return BadRequest("Failed to add stock to portfolio");
+            }
+            else {
+                return Created(); // 201 Created response
+            }
+
+
+
+
 
 
         }

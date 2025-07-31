@@ -98,6 +98,14 @@ namespace StockPlaform.Repositories
 
         }
 
+        public async Task<Stock?> GetBySymbolAsync(string symbol)
+        {
+            return await _context.Stocks
+                .FirstOrDefaultAsync(s=>s.Symbol == symbol);
+      
+
+        }
+
         public async Task<Stock> UpdateAsync(Stock stock)
         {
     
