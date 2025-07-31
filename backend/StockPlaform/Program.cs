@@ -57,9 +57,10 @@ builder.Services.AddScoped<IStockRepository,StockRepository>();
 // Register the CommentRepository
 builder.Services.AddScoped<ICommentRepository, CommentRepository>();
 
-
 // register Token service
 builder.Services.AddScoped<ITokenService, TokenService>();
+// Register the PortfolioRepository
+builder.Services.AddScoped<IPortfolioRepository, PortfolioRepository>();
 
 builder.Services.AddControllers().AddNewtonsoftJson(options =>
 {

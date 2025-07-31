@@ -225,6 +225,18 @@
         }
       }
     },
+    "/api/portfolio": {
+      "get": {
+        "tags": [
+          "Portfolio"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/stock": {
       "get": {
         "tags": [
