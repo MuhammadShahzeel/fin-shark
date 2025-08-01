@@ -38,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -50,11 +50,24 @@
               "Title": "PortfolioRepository.cs",
               "DocumentMoniker": "C:\\Users\\shahz\\OneDrive\\Desktop\\project 1\\fin-shark\\backend\\StockPlaform\\Repositories\\PortfolioRepository.cs",
               "RelativeDocumentMoniker": "StockPlaform\\Repositories\\PortfolioRepository.cs",
-              "ToolTip": "C:\\Users\\shahz\\OneDrive\\Desktop\\project 1\\fin-shark\\backend\\StockPlaform\\Repositories\\PortfolioRepository.cs*",
-              "RelativeToolTip": "StockPlaform\\Repositories\\PortfolioRepository.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAdAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\shahz\\OneDrive\\Desktop\\project 1\\fin-shark\\backend\\StockPlaform\\Repositories\\PortfolioRepository.cs",
+              "RelativeToolTip": "StockPlaform\\Repositories\\PortfolioRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-31T19:21:31.705Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PortfolioController.cs",
+              "DocumentMoniker": "C:\\Users\\shahz\\OneDrive\\Desktop\\project 1\\fin-shark\\backend\\StockPlaform\\Controllers\\PortfolioController.cs",
+              "RelativeDocumentMoniker": "StockPlaform\\Controllers\\PortfolioController.cs",
+              "ToolTip": "C:\\Users\\shahz\\OneDrive\\Desktop\\project 1\\fin-shark\\backend\\StockPlaform\\Controllers\\PortfolioController.cs",
+              "RelativeToolTip": "StockPlaform\\Controllers\\PortfolioController.cs",
+              "ViewState": "AgIAAEoAAAAAAAAAAAAAAFgAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-31T16:10:31.338Z",
               "EditorCaption": ""
             },
             {
@@ -63,9 +76,9 @@
               "Title": "IPortfolioRepository.cs",
               "DocumentMoniker": "C:\\Users\\shahz\\OneDrive\\Desktop\\project 1\\fin-shark\\backend\\StockPlaform\\Interfaces\\IPortfolioRepository.cs",
               "RelativeDocumentMoniker": "StockPlaform\\Interfaces\\IPortfolioRepository.cs",
-              "ToolTip": "C:\\Users\\shahz\\OneDrive\\Desktop\\project 1\\fin-shark\\backend\\StockPlaform\\Interfaces\\IPortfolioRepository.cs*",
-              "RelativeToolTip": "StockPlaform\\Interfaces\\IPortfolioRepository.cs*",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAUwBkAAAAYAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\shahz\\OneDrive\\Desktop\\project 1\\fin-shark\\backend\\StockPlaform\\Interfaces\\IPortfolioRepository.cs",
+              "RelativeToolTip": "StockPlaform\\Interfaces\\IPortfolioRepository.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAAABwAAABMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-31T18:47:39.514Z",
               "EditorCaption": ""
@@ -76,24 +89,11 @@
               "Title": "many to many.txt",
               "DocumentMoniker": "C:\\Users\\shahz\\OneDrive\\Desktop\\project 1\\fin-shark\\backend\\StockPlaform\\many to many.txt",
               "RelativeDocumentMoniker": "StockPlaform\\many to many.txt",
-              "ToolTip": "C:\\Users\\shahz\\OneDrive\\Desktop\\project 1\\fin-shark\\backend\\StockPlaform\\many to many.txt*",
-              "RelativeToolTip": "StockPlaform\\many to many.txt*",
-              "ViewState": "AgIAAEgAAAAAAAAAAAAAAGAAAAA6AAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\shahz\\OneDrive\\Desktop\\project 1\\fin-shark\\backend\\StockPlaform\\many to many.txt",
+              "RelativeToolTip": "StockPlaform\\many to many.txt",
+              "ViewState": "AgIAAF8AAAAAAAAAAAAAAHAAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
               "WhenOpened": "2025-07-30T20:22:41.026Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "PortfolioController.cs",
-              "DocumentMoniker": "C:\\Users\\shahz\\OneDrive\\Desktop\\project 1\\fin-shark\\backend\\StockPlaform\\Controllers\\PortfolioController.cs",
-              "RelativeDocumentMoniker": "StockPlaform\\Controllers\\PortfolioController.cs",
-              "ToolTip": "C:\\Users\\shahz\\OneDrive\\Desktop\\project 1\\fin-shark\\backend\\StockPlaform\\Controllers\\PortfolioController.cs*",
-              "RelativeToolTip": "StockPlaform\\Controllers\\PortfolioController.cs*",
-              "ViewState": "AgIAAEgAAAAAAAAAAAAAAF0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-31T16:10:31.338Z",
               "EditorCaption": ""
             },
             {
@@ -102,12 +102,11 @@
               "Title": "IStockRepository.cs",
               "DocumentMoniker": "C:\\Users\\shahz\\OneDrive\\Desktop\\project 1\\fin-shark\\backend\\StockPlaform\\Interfaces\\IStockRepository.cs",
               "RelativeDocumentMoniker": "StockPlaform\\Interfaces\\IStockRepository.cs",
-              "ToolTip": "C:\\Users\\shahz\\OneDrive\\Desktop\\project 1\\fin-shark\\backend\\StockPlaform\\Interfaces\\IStockRepository.cs*",
-              "RelativeToolTip": "StockPlaform\\Interfaces\\IStockRepository.cs*",
+              "ToolTip": "C:\\Users\\shahz\\OneDrive\\Desktop\\project 1\\fin-shark\\backend\\StockPlaform\\Interfaces\\IStockRepository.cs",
+              "RelativeToolTip": "StockPlaform\\Interfaces\\IStockRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-31T22:03:40.615Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-31T22:03:40.615Z"
             },
             {
               "$type": "Document",

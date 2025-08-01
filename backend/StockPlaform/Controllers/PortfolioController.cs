@@ -54,7 +54,7 @@ namespace StockPlaform.Controllers
             //find user from JWT token claims
             var username = User.GetUsername();
 
-            
+
             //  Identity system ka UserManager use karke user ko database se find karna
             var appUser = await _userManager.FindByNameAsync(username);
 
@@ -81,22 +81,58 @@ namespace StockPlaform.Controllers
                 StockId = stock.Id,
             };
             // Save the portfolio item to the database
-           await _portfolioRepo.GetAsync(portfolioModel);
+            await _portfolioRepo.CreatePortfolioAsync(portfolioModel);
 
             if (portfolioModel == null)
             {
                 return BadRequest("Failed to add stock to portfolio");
             }
-            else {
+            else
+            {
                 return Created(); // 201 Created response
+            }
+        }
+
+            [HttpDelete]
+            [Authorize]
+            public async Task<IActionResult> DeletePortfolio(string symbol)
+            {
+                // Get the username from JWT token claims
+                var username = User.GetUsername();
+            
+                var appUser = await _userManager.FindByNameAsync(username);
+
+                // get user portfolio
+                var userPortfolio = await _portfolioRepo.GetUserPortfolioAsync(appUser);
+
+
+                //filter the user's portfolio to find the stock with the specified symbol
+
+                var filteredStock = userPortfolio.Where(s => s.Symbol.ToLower() == symbol.ToLower()).ToList();
+
+                if (filteredStock.Count() == 1)
+            // Agar sirf 1 match mila to delete karein, warna error return karein
+            // Ye check is liye hai taake duplicate ya missing stocks ko avoid kiya ja sake
+            {
+                await _portfolioRepo.DeletePortfolioAsync(appUser, symbol);
+                }
+                else
+                {
+                    return BadRequest("Stock not found in portfolio.");
+                }
+                return Ok();
             }
 
 
+        
 
 
 
 
-        }
+
+
+
+
 
     }
 }

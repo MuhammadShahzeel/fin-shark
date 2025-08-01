@@ -23,7 +23,10 @@ namespace StockPlaform.Interfaces
         //Yeh method usi join table ko check karke return karega un stocks ki list jo is user ke pass hain
 
         //create a new portfolio item
-        Task<Portfolio> GetAsync(Portfolio portfolio);
+        Task<Portfolio> CreatePortfolioAsync(Portfolio portfolio);
+
+        //delete a portfolio item
+        Task<Portfolio> DeletePortfolioAsync(AppUser appUser,string symbol);
 
 
     }

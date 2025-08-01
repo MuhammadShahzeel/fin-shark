@@ -102,6 +102,27 @@ route : api/portfolio/ POST
 -> add portfolio by symbol make sure the stock exists in database with same symbol
 
 
+---------------------------------------------------------------------------
+DELETE
+how delete works in many to many
+1. get User(Identity claims extension)
+2. get portfolio (portfolio repo)
+3. filter
+4. delete 
+
+step 1: create DeletePortfolio method in PortfolioController.cs
+// check Controllers > PortfolioController.cs for details
+
+step 2: add DeletePortfolioAsync method in IPortfolioRepository.cs
+// check Interfaces > IPortfolioRepository.cs for details
+step 3: implement DeletePortfolioAsync method in PortfolioRepository.cs
+// check Repositories > PortfolioRepository.cs for details
+
+
+
+
+
+
 
 
 

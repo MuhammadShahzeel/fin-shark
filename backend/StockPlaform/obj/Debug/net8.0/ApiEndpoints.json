@@ -142,6 +142,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "StockPlaform.Controllers.PortfolioController",
+    "Method": "DeletePortfolio",
+    "RelativePath": "api/portfolio",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "symbol",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "StockPlaform.Controllers.StockController",
     "Method": "GetAll",
     "RelativePath": "api/stock",
