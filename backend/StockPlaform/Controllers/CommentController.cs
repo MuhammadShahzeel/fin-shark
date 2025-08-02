@@ -1,9 +1,12 @@
 ﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using StockPlaform.Dtos.Comment;
 using StockPlaform.Dtos.Stock;
+using StockPlaform.Extensions;
 using StockPlaform.Interfaces;
 using StockPlaform.Mappers;
+using StockPlaform.Models;
 
 namespace StockPlaform.Controllers
 {
@@ -13,11 +16,14 @@ namespace StockPlaform.Controllers
     {
         private readonly ICommentRepository _commentRepo;
         private readonly IStockRepository _stockRepo;
+        private readonly UserManager<AppUser> _userManager;
 
-        public CommentController(ICommentRepository commentRepo, IStockRepository stockRepo)
+        public CommentController(ICommentRepository commentRepo, IStockRepository stockRepo,
+            UserManager<AppUser> userManager)
         {
             _commentRepo = commentRepo;
             _stockRepo = stockRepo;
+            _userManager = userManager;
         }
 
         [HttpGet]
@@ -71,7 +77,11 @@ namespace StockPlaform.Controllers
             {
                 return NotFound("Stock not found.");
             }
+            //get user from jwt token claims
+            var userName = User.GetUsername();
+            var appUser = await _userManager.FindByNameAsync(userName);
             var newComment = createDto.ToCommentFromCreateDto(stockId);
+            newComment.AppUserId = appUser.Id; // set the AppUserId from the authenticated user
             await _commentRepo.CreateAsync(newComment);
             return CreatedAtAction(nameof(GetById), new { id = newComment.Id }, newComment.ToCommentDto());
         }

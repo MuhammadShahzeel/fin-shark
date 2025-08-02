@@ -23,5 +23,10 @@ namespace StockPlaform.Models
         //        Ye line ek Navigation Property hai.
         //Is se hume poora Stock object mil jata hai jis se yeh comment related hai.
 
+
+        //..one to one relationship
+        public string AppUserId { get; set; }  // FK
+        public AppUser AppUser { get; set; }   // navigation prop
+
     }
 }

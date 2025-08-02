@@ -38,7 +38,9 @@ namespace StockPlaform.Repositories
 
         public async Task<List<Comment>> GetAllAsync()
         {
-            return await _context.Comments.ToListAsync();
+            //comment is a separate table and AppUSer so we need include 
+            return await _context.Comments.Include(a => a.AppUser).ToListAsync();
+
 
 
         }
@@ -47,9 +49,10 @@ namespace StockPlaform.Repositories
 
 
         {
-            return await _context.Comments.FindAsync(id);
-          
-            
+            return await _context.Comments.Include(a => a.AppUser).FirstOrDefaultAsync(x => x.Id == id);
+
+
+
 
         }
         public async Task<Comment> UpdateAsync(Comment comment)

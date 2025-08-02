@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using StockPlaform.Data;
 
@@ -11,9 +12,11 @@ using StockPlaform.Data;
 namespace StockPlaform.Migrations
 {
     [DbContext(typeof(ApplicationDBContext))]
-    partial class ApplicationDBContextModelSnapshot : ModelSnapshot
+    [Migration("20250801213529_CommentOneToOne")]
+    partial class CommentOneToOne
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -51,19 +54,19 @@ namespace StockPlaform.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "14f0b495-2c51-4b6f-8a44-5d6c035863fa",
+                            Id = "f6442525-550e-46f4-8f35-546681375e01",
                             Name = "User",
                             NormalizedName = "USER"
                         },
                         new
                         {
-                            Id = "efaf8334-e27d-4709-9a8d-4e40c340ebb1",
+                            Id = "d749b546-538f-4e24-ad5e-b265a12e2d7b",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
-                            Id = "6579ec04-c8b9-4ba5-b73c-f48f5583797a",
+                            Id = "32459823-bfae-470f-ab38-2bd5098b0bbc",
                             Name = "Manager",
                             NormalizedName = "MANAGER"
                         });
