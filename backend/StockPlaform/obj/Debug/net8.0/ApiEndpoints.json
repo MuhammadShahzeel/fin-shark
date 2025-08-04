@@ -97,14 +97,14 @@
   {
     "ContainingType": "StockPlaform.Controllers.CommentController",
     "Method": "Create",
-    "RelativePath": "api/comment/{stockId}",
+    "RelativePath": "api/comment/{symbol}",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "stockId",
-        "Type": "System.Int32",
+        "Name": "symbol",
+        "Type": "System.String",
         "IsRequired": true
       },
       {

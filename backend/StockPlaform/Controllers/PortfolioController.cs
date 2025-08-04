@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using StockPlaform.Extensions;
 using StockPlaform.Interfaces;
 using StockPlaform.Models;
+using StockPlaform.Services;
 
 namespace StockPlaform.Controllers
 {
@@ -15,16 +16,19 @@ namespace StockPlaform.Controllers
         private readonly UserManager<AppUser> _userManager;
         private readonly IStockRepository _stockRepo;
         private readonly IPortfolioRepository _portfolioRepo;
+        private readonly IFMPService _fmpService;
 
         public PortfolioController(
 
             UserManager<AppUser> userManager,
             IStockRepository stockRepository,
-            IPortfolioRepository portfolioRepo)
+            IPortfolioRepository portfolioRepo,
+            IFMPService fmpService)
         {
             _userManager = userManager;
             _stockRepo = stockRepository;
             _portfolioRepo = portfolioRepo;
+            _fmpService = fmpService;
         }
 
         [HttpGet]
@@ -61,7 +65,32 @@ namespace StockPlaform.Controllers
             // find stock by symbol
             var stock = await _stockRepo.GetBySymbolAsync(symbol);
 
+
             if (stock == null)
+            {
+                stock = await _fmpService.FindStockBySymbolAsync(symbol);
+                if (stock == null)
+                {
+                    return NotFound("Stock not found");
+                }
+
+                else
+                {
+                    // If stock is not found in the database, create a new stock entry
+                    await _stockRepo.CreateAsync(stock);
+
+
+                }
+            }
+
+
+
+
+
+
+
+
+                if (stock == null)
             {
                 return NotFound("Stock not found");
             }

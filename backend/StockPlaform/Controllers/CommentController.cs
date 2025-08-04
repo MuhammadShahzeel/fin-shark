@@ -17,13 +17,15 @@ namespace StockPlaform.Controllers
         private readonly ICommentRepository _commentRepo;
         private readonly IStockRepository _stockRepo;
         private readonly UserManager<AppUser> _userManager;
+        private readonly IFMPService _fmpService;
 
         public CommentController(ICommentRepository commentRepo, IStockRepository stockRepo,
-            UserManager<AppUser> userManager)
+            UserManager<AppUser> userManager,IFMPService fmpService)
         {
             _commentRepo = commentRepo;
             _stockRepo = stockRepo;
             _userManager = userManager;
+            _fmpService = fmpService;
         }
 
         [HttpGet]
@@ -59,8 +61,8 @@ namespace StockPlaform.Controllers
             return Ok(comment.ToCommentDto());
         }
 
-        [HttpPost("{stockId}")]
-        public async Task<IActionResult> Create(int stockId, [FromBody] CreateCommentRequestDto createDto)
+        [HttpPost("{symbol:alpha}")]
+        public async Task<IActionResult> Create(string symbol, [FromBody] CreateCommentRequestDto createDto)
         {
             if (!ModelState.IsValid)
             {
@@ -71,16 +73,38 @@ namespace StockPlaform.Controllers
             {
                 return BadRequest("Invalid comment data.");
             }
-            // Check if the stock exists
-            var stockExists = await _stockRepo.ExistsAsync(stockId);
-            if (!stockExists)
-            {
-                return NotFound("Stock not found.");
+
+            var stock = await _stockRepo.GetBySymbolAsync(symbol);
+
+            if (stock == null)
+                {
+                stock = await _fmpService.FindStockBySymbolAsync(symbol);
+                if (stock == null)
+                {
+                    return NotFound("Stock not found");
+                }
+
+                else
+                {
+                    // If stock is not found in the database, create a new stock entry
+                    await _stockRepo.CreateAsync(stock);
+
+
+                }
+
+
+
             }
+
+
+
+
+
+
             //get user from jwt token claims
             var userName = User.GetUsername();
             var appUser = await _userManager.FindByNameAsync(userName);
-            var newComment = createDto.ToCommentFromCreateDto(stockId);
+            var newComment = createDto.ToCommentFromCreateDto(stock.Id);
             newComment.AppUserId = appUser.Id; // set the AppUserId from the authenticated user
             await _commentRepo.CreateAsync(newComment);
             return CreatedAtAction(nameof(GetById), new { id = newComment.Id }, newComment.ToCommentDto());

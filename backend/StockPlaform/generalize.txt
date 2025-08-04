@@ -1,0 +1,97 @@
+Code First approach.
+
+1) create project
+
+2) install required packages for EF core
+using nuget package manager console or dotnet cli
+- dotnet add package Microsoft.EntityFrameworkCore.SqlServer
+- dotnet add package Microsoft.EntityFrameworkCore.Tools
+- dotnet add package Microsoft.EntityFrameworkCore.Design
+
+3) create models 
+- models may have one to many many to many realtionships check models for details
+
+4) create DbContext best practice is to create inside Data folder Data > ApplicationDBContext.cs
+- create a class that inherits from DbContext
+- define DbSet properties for each model
+
+ public ApplicationDBContext(DbContextOptions options) : base(options)
+        {
+
+
+        }
+        public DbSet<Model> Stocks { get; set; } -> like this reguiter your models
+	}
+}
+
+5) register DbContext in Program.cs
+
+   builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+6) add connection string in appsettings.json file 
+
+"ConnectionStrings": {
+  "anyName": "Server=YOUR_MACHINE_NAME\\SQLEXPRESS;Database=YOUR_DATABASE_NAME;Trusted_Connection=True;TrustServerCertificate=True;"
+}
+
+7) create migrations
+use package manager console or dotnet cli
+- dotnet ef migrations add InitialCreate
+or in package manager console
+- Add-Migration InitialCreate -> or any name you want
+
+it will create tables in your database based on your models
+
+8) update database
+use package manager console or dotnet cli
+- dotnet ef database update
+or in package manager console
+- Update-Database
+
+9) create Repositories
+
+-  repository is a design pattern that separates your business logic (like controllers or services) from the data access logic (like EF Core, SQL queries) (CRUD operations).
+
+- create a folder Interfaces > IAnyNameRepository.cs
+
+- define the interface with methods for CRUD operations, e.g.,
+
+* Task<Stock> CreateAsync(Stock stock); 
+
+- create a folder  Repositories > AnyNameRepository.cs
+
+-  inject the DbContext in the repository constructor eg:
+
+private readonly ApplicationDBContext _context;
+
+        // injection
+        public StockRepository(ApplicationDBContext context)
+        {
+            _context = context;
+        }
+
+- implement the interface in the repository class by inheriting from it
+
+- implement all metods defined in the interface
+
+- Note:
+* use async methods for better performance
+* make sure if you have multiple repositories, you can inject the DbContext in each repository constructor
+
+10) register repositories in Program.cs
+
+- builder.Services.AddScoped<IAnyNameRepository,AnyRepository>();
+- Note: Make sure to register all repositories you created
+
+
+
+
+
+
+
+
+
+
+
+

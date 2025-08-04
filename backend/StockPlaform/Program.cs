@@ -61,6 +61,10 @@ builder.Services.AddScoped<ICommentRepository, CommentRepository>();
 builder.Services.AddScoped<ITokenService, TokenService>();
 // Register the PortfolioRepository
 builder.Services.AddScoped<IPortfolioRepository, PortfolioRepository>();
+// Register the FMPService
+builder.Services.AddScoped<IFMPService, FMPService>();
+builder.Services.AddHttpClient<IFMPService, FMPService>();
+
 
 builder.Services.AddControllers().AddNewtonsoftJson(options =>
 {
