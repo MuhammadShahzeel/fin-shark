@@ -117,9 +117,19 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+// CORS setup 
+app.UseCors(x => x
+    .AllowAnyMethod()                //  Sab HTTP methods allow (GET, POST, PUT, DELETE, etc.)
+    .AllowAnyHeader()                //  Sab headers allow (e.g., Authorization, Content-Type)
+    .AllowCredentials()             //  Cookies or JWT bhejne ki permission milti hai
+    .SetIsOriginAllowed(origin => true) //  Har origin allow hoga (sirf development ke liye theek)
+                                        // .WithOrigins("http://localhost:3000 or url") //  Use this instead in production for safety
+);
+
+
 app.UseAuthentication();
 app.UseAuthorization();
-
 app.MapControllers();
 
 app.Run();

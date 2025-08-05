@@ -36,13 +36,26 @@ Step 7:
 4. Create comment/portfolio
 
 
--> modify StockController to use FMPService
--> inject FMPService in StockController
+-> modify CommentController to use FMPService
+-> inject FMPService in CommentController
 -> make changes in Create IActionMethod
 
 step 8:
- make changes in PortfolioController 
- check AddPortfolio IActionMethod
+-> modify PortfolioController to use FMPService
+-> inject FMPService in PortfolioController
+-> check AddPortfolio IActionMethod
+
+step 9:
+test 
+adding stock through symbol in portfolio i will fetch data from FMPService and add stock to portfolio
+
+
+
+
+
+
+
+
 
 
 

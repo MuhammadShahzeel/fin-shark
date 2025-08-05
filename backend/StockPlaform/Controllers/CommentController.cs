@@ -1,9 +1,11 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using StockPlaform.Dtos.Comment;
 using StockPlaform.Dtos.Stock;
 using StockPlaform.Extensions;
+using StockPlaform.Helpers;
 using StockPlaform.Interfaces;
 using StockPlaform.Mappers;
 using StockPlaform.Models;
@@ -29,7 +31,8 @@ namespace StockPlaform.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetAll()
+        [Authorize]
+        public async Task<IActionResult> GetAll([FromQuery] CommentQueryObject commentQueryObject)
         {
             if(!ModelState.IsValid)
             {
@@ -37,7 +40,7 @@ namespace StockPlaform.Controllers
             }
 
 
-            var comments = await _commentRepo.GetAllAsync();
+            var comments = await _commentRepo.GetAllAsync(commentQueryObject);
 
             var commentDto = comments.Select(c => c.ToCommentDto());
             return Ok(commentDto);

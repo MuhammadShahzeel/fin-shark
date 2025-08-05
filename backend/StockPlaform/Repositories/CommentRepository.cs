@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using StockPlaform.Data;
+using StockPlaform.Helpers;
 using StockPlaform.Interfaces;
 using StockPlaform.Models;
 
@@ -36,10 +37,31 @@ namespace StockPlaform.Repositories
 
         }
 
-        public async Task<List<Comment>> GetAllAsync()
+        public async Task<List<Comment>> GetAllAsync(CommentQueryObject commentQueryObject)
         {
             //comment is a separate table and AppUSer so we need include 
-            return await _context.Comments.Include(a => a.AppUser).ToListAsync();
+            var comments =  _context.Comments.Include(a => a.AppUser).AsQueryable();
+
+            if (!string.IsNullOrEmpty(commentQueryObject.Symbol))
+            {
+
+                // only comments related to this stock
+                comments = comments.Where(s => s.Stock.Symbol == commentQueryObject.Symbol);
+
+            }
+            if (commentQueryObject.IsDecsending == true)
+            {
+                comments = comments.OrderByDescending(c => c.CreatedOn);
+            }
+
+
+
+            return await comments.ToListAsync();
+
+
+
+
+
 
 
 

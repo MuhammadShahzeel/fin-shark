@@ -75,6 +75,8 @@ builder.Services.AddScoped<IPortfolioRepository, PortfolioRepository>();
 step 8: testing
 route : api/portfolio to test
 
+//yeh jwt sy jo user authenticated hoga usi k portfolios dikhy gy hr user k apny apny agr koi new user login hua hy to by default koi portfolio nh higa us k pass
+
 
 ---------------------------------------------------------------------------
 CREATE
