@@ -7,6 +7,11 @@ interface Props {
   price: number;
 }
 
+// props sirf is type k hi hongy or hr card me yehi props pass honge
+// companyName, ticker, price
+// companyName string hoga, ticker string hoga, price number hoga
+
+
 const Card: React.FC<Props> = ({
   companyName,
   ticker,

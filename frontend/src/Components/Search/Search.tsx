@@ -1,0 +1,22 @@
+import React, { useState, type JSX } from 'react'
+
+type Props = {}
+
+const Search: React.FC<Props> = (props: Props): JSX.Element => {
+  const [search, setSearch] = useState<string>("");
+//   Yahan <string> ka matlab:
+// search ka type string hoga.
+// setSearch sirf string accept karega.
+
+  const onClick = (e: any) => {
+    setSearch(e.target.value);
+    console.log(e);
+  };
+  return (
+    <div>
+      <input value={search} onChange={(e) => onClick(e)}></input>
+    </div>
+  );
+};
+
+export default Search
