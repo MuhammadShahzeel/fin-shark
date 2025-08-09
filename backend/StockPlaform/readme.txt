@@ -1,4 +1,4 @@
-﻿dto hm jb bnaty hen jb koi data hm nhi bhjna xhahty 
+﻿dto hm jb bnaty hen jb koi data hm nhi bhjna chahty kuch chize jo hm 
 
 Dto flder create krlo 
 
@@ -49,7 +49,7 @@ Mapper ka Kaam Kya Hai?
  AutoMapper time bachata hai
 
 
- then make changes in controllers see sontroller for details
+ then make changes in controllers see controller for details
 
 
  //

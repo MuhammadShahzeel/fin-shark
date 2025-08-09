@@ -608,7 +608,6 @@ C:\Users\shahz\OneDrive\Desktop\project 1\fin-shark\backend\StockPlaform\obj\Deb
 C:\Users\shahz\OneDrive\Desktop\project 1\fin-shark\backend\StockPlaform\obj\Debug\net8.0\staticwebassets.build.json.cache
 C:\Users\shahz\OneDrive\Desktop\project 1\fin-shark\backend\StockPlaform\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\shahz\OneDrive\Desktop\project 1\fin-shark\backend\StockPlaform\obj\Debug\net8.0\staticwebassets.build.endpoints.json
-C:\Users\shahz\OneDrive\Desktop\project 1\fin-shark\backend\StockPlaform\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\shahz\OneDrive\Desktop\project 1\fin-shark\backend\StockPlaform\obj\Debug\net8.0\StockPla.8F3F8785.Up2Date
 C:\Users\shahz\OneDrive\Desktop\project 1\fin-shark\backend\StockPlaform\obj\Debug\net8.0\StockPlaform.dll
 C:\Users\shahz\OneDrive\Desktop\project 1\fin-shark\backend\StockPlaform\obj\Debug\net8.0\refint\StockPlaform.dll

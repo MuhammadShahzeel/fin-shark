@@ -3,6 +3,30 @@
   "WorkspaceRootPath": "C:\\Users\\shahz\\OneDrive\\Desktop\\project 1\\fin-shark\\backend\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{88A93128-85AE-40F4-ABDC-3814D897A091}|StockPlaform\\StockPlaform.csproj|c:\\users\\shahz\\onedrive\\desktop\\project 1\\fin-shark\\backend\\stockplaform\\generalize.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{88A93128-85AE-40F4-ABDC-3814D897A091}|StockPlaform\\StockPlaform.csproj|solutionrelative:stockplaform\\generalize.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88A93128-85AE-40F4-ABDC-3814D897A091}|StockPlaform\\StockPlaform.csproj|c:\\users\\shahz\\onedrive\\desktop\\project 1\\fin-shark\\backend\\stockplaform\\readme.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{88A93128-85AE-40F4-ABDC-3814D897A091}|StockPlaform\\StockPlaform.csproj|solutionrelative:stockplaform\\readme.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88A93128-85AE-40F4-ABDC-3814D897A091}|StockPlaform\\StockPlaform.csproj|c:\\users\\shahz\\onedrive\\desktop\\project 1\\fin-shark\\backend\\stockplaform\\models\\stock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88A93128-85AE-40F4-ABDC-3814D897A091}|StockPlaform\\StockPlaform.csproj|solutionrelative:stockplaform\\models\\stock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88A93128-85AE-40F4-ABDC-3814D897A091}|StockPlaform\\StockPlaform.csproj|c:\\users\\shahz\\onedrive\\desktop\\project 1\\fin-shark\\backend\\stockplaform\\comment filter.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{88A93128-85AE-40F4-ABDC-3814D897A091}|StockPlaform\\StockPlaform.csproj|solutionrelative:stockplaform\\comment filter.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88A93128-85AE-40F4-ABDC-3814D897A091}|StockPlaform\\StockPlaform.csproj|c:\\users\\shahz\\onedrive\\desktop\\project 1\\fin-shark\\backend\\stockplaform\\repositories\\stockrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88A93128-85AE-40F4-ABDC-3814D897A091}|StockPlaform\\StockPlaform.csproj|solutionrelative:stockplaform\\repositories\\stockrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88A93128-85AE-40F4-ABDC-3814D897A091}|StockPlaform\\StockPlaform.csproj|c:\\users\\shahz\\onedrive\\desktop\\project 1\\fin-shark\\backend\\stockplaform\\controllers\\stockcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88A93128-85AE-40F4-ABDC-3814D897A091}|StockPlaform\\StockPlaform.csproj|solutionrelative:stockplaform\\controllers\\stockcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{88A93128-85AE-40F4-ABDC-3814D897A091}|StockPlaform\\StockPlaform.csproj|c:\\users\\shahz\\onedrive\\desktop\\project 1\\fin-shark\\backend\\stockplaform\\many to many.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{88A93128-85AE-40F4-ABDC-3814D897A091}|StockPlaform\\StockPlaform.csproj|solutionrelative:stockplaform\\many to many.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
@@ -17,10 +41,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{88A93128-85AE-40F4-ABDC-3814D897A091}|StockPlaform\\StockPlaform.csproj|c:\\users\\shahz\\onedrive\\desktop\\project 1\\fin-shark\\backend\\stockplaform\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{88A93128-85AE-40F4-ABDC-3814D897A091}|StockPlaform\\StockPlaform.csproj|solutionrelative:stockplaform\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{88A93128-85AE-40F4-ABDC-3814D897A091}|StockPlaform\\StockPlaform.csproj|c:\\users\\shahz\\onedrive\\desktop\\project 1\\fin-shark\\backend\\stockplaform\\comment filter.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{88A93128-85AE-40F4-ABDC-3814D897A091}|StockPlaform\\StockPlaform.csproj|solutionrelative:stockplaform\\comment filter.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{88A93128-85AE-40F4-ABDC-3814D897A091}|StockPlaform\\StockPlaform.csproj|c:\\users\\shahz\\onedrive\\desktop\\project 1\\fin-shark\\backend\\stockplaform\\controllers\\commentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -43,20 +63,8 @@
       "RelativeMoniker": "D:0:0:{88A93128-85AE-40F4-ABDC-3814D897A091}|StockPlaform\\StockPlaform.csproj|solutionrelative:stockplaform\\interfaces\\icommentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{88A93128-85AE-40F4-ABDC-3814D897A091}|StockPlaform\\StockPlaform.csproj|c:\\users\\shahz\\onedrive\\desktop\\project 1\\fin-shark\\backend\\stockplaform\\controllers\\stockcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{88A93128-85AE-40F4-ABDC-3814D897A091}|StockPlaform\\StockPlaform.csproj|solutionrelative:stockplaform\\controllers\\stockcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{88A93128-85AE-40F4-ABDC-3814D897A091}|StockPlaform\\StockPlaform.csproj|c:\\users\\shahz\\onedrive\\desktop\\project 1\\fin-shark\\backend\\stockplaform\\repositories\\stockrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{88A93128-85AE-40F4-ABDC-3814D897A091}|StockPlaform\\StockPlaform.csproj|solutionrelative:stockplaform\\repositories\\stockrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{88A93128-85AE-40F4-ABDC-3814D897A091}|StockPlaform\\StockPlaform.csproj|c:\\users\\shahz\\onedrive\\desktop\\project 1\\fin-shark\\backend\\stockplaform\\repositories\\portfoliorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{88A93128-85AE-40F4-ABDC-3814D897A091}|StockPlaform\\StockPlaform.csproj|solutionrelative:stockplaform\\repositories\\portfoliorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{88A93128-85AE-40F4-ABDC-3814D897A091}|StockPlaform\\StockPlaform.csproj|c:\\users\\shahz\\onedrive\\desktop\\project 1\\fin-shark\\backend\\stockplaform\\models\\stock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{88A93128-85AE-40F4-ABDC-3814D897A091}|StockPlaform\\StockPlaform.csproj|solutionrelative:stockplaform\\models\\stock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -66,11 +74,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "comment filter.txt",
               "DocumentMoniker": "C:\\Users\\shahz\\OneDrive\\Desktop\\project 1\\fin-shark\\backend\\StockPlaform\\comment filter.txt",
               "RelativeDocumentMoniker": "StockPlaform\\comment filter.txt",
@@ -87,44 +95,56 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "many to many.txt",
-              "DocumentMoniker": "C:\\Users\\shahz\\OneDrive\\Desktop\\project 1\\fin-shark\\backend\\StockPlaform\\many to many.txt",
-              "RelativeDocumentMoniker": "StockPlaform\\many to many.txt",
-              "ToolTip": "C:\\Users\\shahz\\OneDrive\\Desktop\\project 1\\fin-shark\\backend\\StockPlaform\\many to many.txt",
-              "RelativeToolTip": "StockPlaform\\many to many.txt",
-              "ViewState": "AgIAADQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "readme.txt",
+              "DocumentMoniker": "C:\\Users\\shahz\\OneDrive\\Desktop\\project 1\\fin-shark\\backend\\StockPlaform\\readme.txt",
+              "RelativeDocumentMoniker": "StockPlaform\\readme.txt",
+              "ToolTip": "C:\\Users\\shahz\\OneDrive\\Desktop\\project 1\\fin-shark\\backend\\StockPlaform\\readme.txt",
+              "RelativeToolTip": "StockPlaform\\readme.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAABFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2025-08-05T19:46:59.089Z",
+              "WhenOpened": "2025-08-06T20:18:18.901Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "generalize.txt",
+              "DocumentMoniker": "C:\\Users\\shahz\\OneDrive\\Desktop\\project 1\\fin-shark\\backend\\StockPlaform\\generalize.txt",
+              "RelativeDocumentMoniker": "StockPlaform\\generalize.txt",
+              "ToolTip": "C:\\Users\\shahz\\OneDrive\\Desktop\\project 1\\fin-shark\\backend\\StockPlaform\\generalize.txt",
+              "RelativeToolTip": "StockPlaform\\generalize.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-08-06T19:34:23.11Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\shahz\\OneDrive\\Desktop\\project 1\\fin-shark\\backend\\StockPlaform\\Program.cs",
-              "RelativeDocumentMoniker": "StockPlaform\\Program.cs",
-              "ToolTip": "C:\\Users\\shahz\\OneDrive\\Desktop\\project 1\\fin-shark\\backend\\StockPlaform\\Program.cs",
-              "RelativeToolTip": "StockPlaform\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHMAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-05T19:17:43.37Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "CommentRepository.cs",
-              "DocumentMoniker": "C:\\Users\\shahz\\OneDrive\\Desktop\\project 1\\fin-shark\\backend\\StockPlaform\\Repositories\\CommentRepository.cs",
-              "RelativeDocumentMoniker": "StockPlaform\\Repositories\\CommentRepository.cs",
-              "ToolTip": "C:\\Users\\shahz\\OneDrive\\Desktop\\project 1\\fin-shark\\backend\\StockPlaform\\Repositories\\CommentRepository.cs",
-              "RelativeToolTip": "StockPlaform\\Repositories\\CommentRepository.cs",
-              "ViewState": "AgIAACgAAAAAAAAAAAAAADoAAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-05T16:35:25.218Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 5,
+              "Title": "StockController.cs",
+              "DocumentMoniker": "C:\\Users\\shahz\\OneDrive\\Desktop\\project 1\\fin-shark\\backend\\StockPlaform\\Controllers\\StockController.cs",
+              "RelativeDocumentMoniker": "StockPlaform\\Controllers\\StockController.cs",
+              "ToolTip": "C:\\Users\\shahz\\OneDrive\\Desktop\\project 1\\fin-shark\\backend\\StockPlaform\\Controllers\\StockController.cs",
+              "RelativeToolTip": "StockPlaform\\Controllers\\StockController.cs",
+              "ViewState": "AgIAAGMAAAAAAAAAAAAcwIEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T15:10:22.998Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "StockRepository.cs",
+              "DocumentMoniker": "C:\\Users\\shahz\\OneDrive\\Desktop\\project 1\\fin-shark\\backend\\StockPlaform\\Repositories\\StockRepository.cs",
+              "RelativeDocumentMoniker": "StockPlaform\\Repositories\\StockRepository.cs",
+              "ToolTip": "C:\\Users\\shahz\\OneDrive\\Desktop\\project 1\\fin-shark\\backend\\StockPlaform\\Repositories\\StockRepository.cs",
+              "RelativeToolTip": "StockPlaform\\Repositories\\StockRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGwAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T15:11:23.483Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "CommentController.cs",
               "DocumentMoniker": "C:\\Users\\shahz\\OneDrive\\Desktop\\project 1\\fin-shark\\backend\\StockPlaform\\Controllers\\CommentController.cs",
               "RelativeDocumentMoniker": "StockPlaform\\Controllers\\CommentController.cs",
@@ -136,7 +156,31 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
+              "Title": "Stock.cs",
+              "DocumentMoniker": "C:\\Users\\shahz\\OneDrive\\Desktop\\project 1\\fin-shark\\backend\\StockPlaform\\Models\\Stock.cs",
+              "RelativeDocumentMoniker": "StockPlaform\\Models\\Stock.cs",
+              "ToolTip": "C:\\Users\\shahz\\OneDrive\\Desktop\\project 1\\fin-shark\\backend\\StockPlaform\\Models\\Stock.cs",
+              "RelativeToolTip": "StockPlaform\\Models\\Stock.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAxwCQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T15:05:49.975Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "many to many.txt",
+              "DocumentMoniker": "C:\\Users\\shahz\\OneDrive\\Desktop\\project 1\\fin-shark\\backend\\StockPlaform\\many to many.txt",
+              "RelativeDocumentMoniker": "StockPlaform\\many to many.txt",
+              "ToolTip": "C:\\Users\\shahz\\OneDrive\\Desktop\\project 1\\fin-shark\\backend\\StockPlaform\\many to many.txt",
+              "RelativeToolTip": "StockPlaform\\many to many.txt",
+              "ViewState": "AgIAADkAAAAAAAAAAAAcwE0AAAChAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-08-05T19:46:59.089Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "PortfolioController.cs",
               "DocumentMoniker": "C:\\Users\\shahz\\OneDrive\\Desktop\\project 1\\fin-shark\\backend\\StockPlaform\\Controllers\\PortfolioController.cs",
               "RelativeDocumentMoniker": "StockPlaform\\Controllers\\PortfolioController.cs",
@@ -148,7 +192,31 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "CommentRepository.cs",
+              "DocumentMoniker": "C:\\Users\\shahz\\OneDrive\\Desktop\\project 1\\fin-shark\\backend\\StockPlaform\\Repositories\\CommentRepository.cs",
+              "RelativeDocumentMoniker": "StockPlaform\\Repositories\\CommentRepository.cs",
+              "ToolTip": "C:\\Users\\shahz\\OneDrive\\Desktop\\project 1\\fin-shark\\backend\\StockPlaform\\Repositories\\CommentRepository.cs",
+              "RelativeToolTip": "StockPlaform\\Repositories\\CommentRepository.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAAAADoAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T16:35:25.218Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 8,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\shahz\\OneDrive\\Desktop\\project 1\\fin-shark\\backend\\StockPlaform\\Program.cs",
+              "RelativeDocumentMoniker": "StockPlaform\\Program.cs",
+              "ToolTip": "C:\\Users\\shahz\\OneDrive\\Desktop\\project 1\\fin-shark\\backend\\StockPlaform\\Program.cs",
+              "RelativeToolTip": "StockPlaform\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHMAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T19:17:43.37Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "FMPService.cs",
               "DocumentMoniker": "C:\\Users\\shahz\\OneDrive\\Desktop\\project 1\\fin-shark\\backend\\StockPlaform\\Services\\FMPService.cs",
               "RelativeDocumentMoniker": "StockPlaform\\Services\\FMPService.cs",
@@ -160,7 +228,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 9,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\shahz\\OneDrive\\Desktop\\project 1\\fin-shark\\backend\\StockPlaform\\appsettings.json",
               "RelativeDocumentMoniker": "StockPlaform\\appsettings.json",
@@ -172,7 +240,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 12,
               "Title": "CommentQueryObject.cs",
               "DocumentMoniker": "C:\\Users\\shahz\\OneDrive\\Desktop\\project 1\\fin-shark\\backend\\StockPlaform\\Helpers\\CommentQueryObject.cs",
               "RelativeDocumentMoniker": "StockPlaform\\Helpers\\CommentQueryObject.cs",
@@ -184,19 +252,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "StockRepository.cs",
-              "DocumentMoniker": "C:\\Users\\shahz\\OneDrive\\Desktop\\project 1\\fin-shark\\backend\\StockPlaform\\Repositories\\StockRepository.cs",
-              "RelativeDocumentMoniker": "StockPlaform\\Repositories\\StockRepository.cs",
-              "ToolTip": "C:\\Users\\shahz\\OneDrive\\Desktop\\project 1\\fin-shark\\backend\\StockPlaform\\Repositories\\StockRepository.cs",
-              "RelativeToolTip": "StockPlaform\\Repositories\\StockRepository.cs",
-              "ViewState": "AgIAAGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-05T15:11:23.483Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 14,
               "Title": "ICommentRepository.cs",
               "DocumentMoniker": "C:\\Users\\shahz\\OneDrive\\Desktop\\project 1\\fin-shark\\backend\\StockPlaform\\Interfaces\\ICommentRepository.cs",
               "RelativeDocumentMoniker": "StockPlaform\\Interfaces\\ICommentRepository.cs",
@@ -208,31 +264,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "StockController.cs",
-              "DocumentMoniker": "C:\\Users\\shahz\\OneDrive\\Desktop\\project 1\\fin-shark\\backend\\StockPlaform\\Controllers\\StockController.cs",
-              "RelativeDocumentMoniker": "StockPlaform\\Controllers\\StockController.cs",
-              "ToolTip": "C:\\Users\\shahz\\OneDrive\\Desktop\\project 1\\fin-shark\\backend\\StockPlaform\\Controllers\\StockController.cs",
-              "RelativeToolTip": "StockPlaform\\Controllers\\StockController.cs",
-              "ViewState": "AgIAAFoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-05T15:10:22.998Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Stock.cs",
-              "DocumentMoniker": "C:\\Users\\shahz\\OneDrive\\Desktop\\project 1\\fin-shark\\backend\\StockPlaform\\Models\\Stock.cs",
-              "RelativeDocumentMoniker": "StockPlaform\\Models\\Stock.cs",
-              "ToolTip": "C:\\Users\\shahz\\OneDrive\\Desktop\\project 1\\fin-shark\\backend\\StockPlaform\\Models\\Stock.cs",
-              "RelativeToolTip": "StockPlaform\\Models\\Stock.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-05T15:05:49.975Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 15,
               "Title": "PortfolioRepository.cs",
               "DocumentMoniker": "C:\\Users\\shahz\\OneDrive\\Desktop\\project 1\\fin-shark\\backend\\StockPlaform\\Repositories\\PortfolioRepository.cs",
               "RelativeDocumentMoniker": "StockPlaform\\Repositories\\PortfolioRepository.cs",

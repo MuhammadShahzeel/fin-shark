@@ -1,3 +1,7 @@
+
+-------------------------------------------------------------------------------------------------
+Basic Setup
+------------------------------------------------------------------------------------------------
 Code First approach.
 
 1) create project
@@ -83,6 +87,249 @@ private readonly ApplicationDBContext _context;
 
 - builder.Services.AddScoped<IAnyNameRepository,AnyRepository>();
 - Note: Make sure to register all repositories you created
+
+11) create controllers
+- create a folder Controllers > AnyNameController.cs
+- right click on Controllers folder and add a new controller 
+- inject the repository in the controller constructor make sure inject the interface not the concrete class
+- define the controller methods for CRUD operations
+- use async methods for better performance
+- check Controllers > StockController.cs for details
+- also check StockRepository.cs for details on how to implement CRUD operations
+- use [FromBody] attribute to bind the request body to the model in POST and PUT methods
+------------------------------------------------------------------------------------------------
+Generalized CRUD operations for EntityController and Repository may change a/c to your needs
+------------------------------------------------------------------------------------------------
+
+
+public interface IEntityRepository
+{
+    Task<List<Entity>> GetAllAsync();
+    Task<Entity?> GetByIdAsync(int id);
+    Task<Entity> CreateAsync(Entity entity);
+    Task<Entity?> UpdateAsync(Entity entity);
+    Task<Entity?> DeleteAsync(int id);
+    Task<bool> ExistsAsync(int id);
+}
+-----------------------------------------------------------------------------------------
+public class EntityRepository : IEntityRepository
+{
+    private readonly ApplicationDBContext _context;
+
+    public EntityRepository(ApplicationDBContext context)
+    {
+        _context = context;
+    }
+
+    public async Task<List<Entity>> GetAllAsync()
+    {
+        return await _context.Entities.ToListAsync();
+    }
+
+    public async Task<Entity?> GetByIdAsync(int id)
+    {
+        return await _context.Entities.FindAsync(id);
+    }
+
+    public async Task<Entity> CreateAsync(Entity entity)
+    {
+        await _context.Entities.AddAsync(entity);
+        await _context.SaveChangesAsync();
+        return entity;
+    }
+
+    public async Task<Entity?> UpdateAsync(Entity entity)
+    {
+        var exists = await _context.Entities.AnyAsync(e => e.Id == entity.Id);
+        if (!exists) return null;
+
+        _context.Entities.Update(entity);
+        await _context.SaveChangesAsync();
+        return entity;
+    }
+
+    public async Task<Entity?> DeleteAsync(int id)
+    {
+        var entity = await _context.Entities.FindAsync(id);
+        if (entity == null) return null;
+
+        _context.Entities.Remove(entity);
+        await _context.SaveChangesAsync();
+        return entity;
+    }
+
+    public async Task<bool> ExistsAsync(int id)
+    {
+        return await _context.Entities.AnyAsync(e => e.Id == id);
+    }
+
+
+-----------------------------------------------------------------------------------------
+
+[Route("api/[controller]")]
+[ApiController]
+public class EntityController : ControllerBase
+{
+    private readonly IEntityRepository _entityRepo;
+
+    public EntityController(IEntityRepository entityRepo)
+    {
+        _entityRepo = entityRepo;
+    }
+
+    [HttpGet]
+    public async Task<IActionResult> GetAll()
+    {
+        var data = await _entityRepo.GetAllAsync();
+        return Ok(data);
+    }
+
+    [HttpGet("{id}")]
+    public async Task<IActionResult> GetById(int id)
+    {
+        var entity = await _entityRepo.GetByIdAsync(id);
+        if (entity == null) return NotFound("Entity not found");
+        return Ok(entity);
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> Create([FromBody] Entity entity)
+    {
+        if (!ModelState.IsValid) return BadRequest(ModelState);
+
+        var created = await _entityRepo.CreateAsync(entity);
+        return CreatedAtAction(nameof(GetById), new { id = created.Id }, created);
+    }
+
+    [HttpPut("{id}")]
+    public async Task<IActionResult> Update(int id, [FromBody] Entity entity)
+    {
+        if (!ModelState.IsValid) return BadRequest(ModelState);
+        if (id != entity.Id) return BadRequest("ID mismatch");
+
+        var updated = await _entityRepo.UpdateAsync(entity);
+        if (updated == null) return NotFound("Entity not found");
+
+        return Ok(updated);
+    }
+
+    [HttpDelete("{id}")]
+    public async Task<IActionResult> Delete(int id)
+    {
+        var deleted = await _entityRepo.DeleteAsync(id);
+        if (deleted == null) return NotFound("Entity not found");
+        return NoContent();
+    }
+}
+
+------------------------------------------------------------------------------------------
+DTO (Data Transfer Object)
+------------------------------------------------------------------------------------------
+DTO ka Basic Maqsad:
+
+- Data Transfer Only:
+DTO sirf data transfer karne ke liye hoti hai — frontend se backend ya backend se frontend.
+
+- Security:
+Sensitive fields (e.g., PasswordHash, InternalId) ko hide karna.
+
+- Custom Fields:
+Sirf required fields bhejna — unnecessary fields skip karna.
+
+- Validation:
+DTOs me [Required], [Range] jaise validation attributes laga sakte ho.
+
+- Loose Coupling:
+Model change hone par client break nahi hota — DTO ne dependency reduce ki hoti hai.
+
+
+eg:
+
+Entity Model (e.g., User Entity)
+
+public class User
+{
+    public int Id { get; set; }
+    public string FullName { get; set; }
+    public string Email { get; set; }
+    public string PasswordHash { get; set; }
+    public DateTime CreatedAt { get; set; }
+    public bool IsAdmin { get; set; }
+}
+
+DTO (e.g., UserDto)
+
+public class UserDto
+{
+    public string FullName { get; set; }
+    public string Email { get; set; }
+}
+
+- hmny yahan sy extra cheezen hta di
+- Note: check StockDto,StockModel,CmmentDto,CommentModel for details 
+
+--------------------------------------------------------------------------------
+public static class EntityMapper
+{
+    // Model -> DTO
+
+public static class [ModelName]Mappers
+{
+    public static [DtoName] To[DtoName](this [ModelName] modelObject)
+    {
+        return new [DtoName]
+        {
+            Property1 = modelObject.Property1,
+            Property2 = modelObject.Property2,
+            // ... Add more as needed
+        };
+    }
+}
+
+
+    // DTO -> Model //jb frontend se data a ra ho
+
+    public static class [ModelName]Mappers
+{
+    public static [ModelName] To[ModelName](this [DtoName] dtoObject)
+    {
+        return new [ModelName]
+        {
+            Property1 = dtoObject.Property1,
+            Property2 = dtoObject.Property2,
+            // ... Add more
+        };
+    }
+}
+
+// update Dto
+
+       public static void UpdateFromDto(this [ModelName] modelObject, Update[ModelName]RequestDto dtoObject)
+        {
+            modelObject.Property1 = dtoObject.Property1;
+            modelObject.Property2 = dtoObject.Property2;
+            // ... Add more fields to update
+        }
+    }
+}
+
+
+
+
+Mapper ka Kaam Kya Hai?
+- Mapper = bridge between Model <-> DTO
+- Ye kaam tum manually karo ya AutoMapper se
+- Large projects mein 
+- AutoMapper time bachata hai
+* then make changes in controllers see controller for details
+
+Note: 
+- make sure the method and class must be static
+- check Mappers > StockMappers.cs, CommentMappers.cs for details
+
+
+
+
 
 
 
