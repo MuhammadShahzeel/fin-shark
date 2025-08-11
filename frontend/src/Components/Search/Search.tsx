@@ -1,4 +1,4 @@
-import React, { useState, type JSX } from 'react'
+import React, { useState, type ChangeEvent, type JSX, type SyntheticEvent } from 'react'
 
 type Props = {}
 
@@ -8,13 +8,17 @@ const Search: React.FC<Props> = (props: Props): JSX.Element => {
 // search ka type string hoga.
 // setSearch sirf string accept karega.
 
-  const onClick = (e: any) => {
+  const handleChange = (e:ChangeEvent<HTMLInputElement>) => {
     setSearch(e.target.value);
     console.log(e);
   };
+  const onClick = (e:SyntheticEvent) => {
+    console.log(e);
+  }
   return (
     <div>
-      <input value={search} onChange={(e) => onClick(e)}></input>
+      <input value={search} onChange={handleChange}></input>
+      <button onClick={onClick}>Search</button>
     </div>
   );
 };
