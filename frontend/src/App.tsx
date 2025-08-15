@@ -6,6 +6,7 @@ import { searchCompanies } from "./api";
 import type { CompanySearch } from "./company";
 import ListPortfolio from "./Components/Portfolio/ListPortfolio/ListPortfolio";
 
+
 function App() {
   const [search, setSearch] = useState<string>("");
   const [portfolioValues, setPortfolioValues] = useState<string[]>([]);
@@ -19,7 +20,11 @@ function App() {
   const onPortfolioCreate = (e: any) => {
     e.preventDefault();
     console.log(e);
-    //Arrays are tricky to update. Please wait till next video.
+
+      const exists = portfolioValues.find((value) => value === e.target[0].value);
+    if (exists) return;
+    const updatedPortfolio = [...portfolioValues, e.target[0].value];
+    setPortfolioValues(updatedPortfolio);
   };
 
   const onSearchSubmit = async (e: SyntheticEvent) => {
@@ -33,6 +38,14 @@ function App() {
     }
   };
 
+    const onPortfolioDelete = (e: any) => {
+    e.preventDefault();
+    const removed = portfolioValues.filter((value) => {
+      return value !== e.target[0].value;
+    });
+    setPortfolioValues(removed);
+  };
+
   return (
     <div className="App">
       <Search
@@ -40,7 +53,10 @@ function App() {
         search={search}
         handleSearchChange={handleSearchChange}
       />
-      <ListPortfolio />
+          <ListPortfolio
+        portfolioValues={portfolioValues}
+        onPortfolioDelete={onPortfolioDelete}
+      />
       <CardList
         searchResults={searchResult}
         onPortfolioCreate={onPortfolioCreate}
