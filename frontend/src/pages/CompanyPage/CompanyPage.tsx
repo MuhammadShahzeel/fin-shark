@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-;
+
 import { useParams } from "react-router-dom";
 import { getCompanyProfile } from "../../api";
 import Sidebar from "../../Components/Sidebar/Sidebar";
@@ -29,6 +29,9 @@ const CompanyPage = (props: Props) => {
           <Sidebar />
           <CompanyDashboard ticker={ticker!}>
             <Tile title="Company Name" subTitle={company.companyName} />
+            <Tile title="Price" subTitle={company.price.toString()} />
+            <Tile title="Sector" subTitle={company.sector} />
+            <Tile title="Market Cap" subTitle={company.mktCap.toString()} />
           </CompanyDashboard>
         </div>
       ) : (
