@@ -4,6 +4,7 @@ import Table from "../Table/Table";
 
 import { getIncomeStatement } from "../../api";
 import type { CompanyIncomeStatement } from "../../company";
+import Spinner from "../Spinners/Spinner";
 
 type Props = {};
 
@@ -54,7 +55,7 @@ const IncomeStatement = (props: Props) => {
       {incomeStatement ? (
         <Table config={configs} data={incomeStatement} />
       ) : (
-        <h1>Could not find income statement.</h1>
+         <Spinner />
       )}
     </>
   );
