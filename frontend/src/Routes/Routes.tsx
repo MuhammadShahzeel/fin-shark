@@ -12,6 +12,7 @@ import DesignGuide from "../pages/DesignGuide/DesignGuide";
 import CompanyPage from "../pages/CompanyPage/CompanyPage";
 import HistoricalDividend from "../Components/HistoricalDividend/HistoricalDividend";
 import LoginPage from "../pages/LoginPage/LoginPage";
+import RegisterPage from "../pages/RegisterPage/RegisterPage";
 
 export const router = createBrowserRouter([
   {
@@ -20,6 +21,7 @@ export const router = createBrowserRouter([
     children: [
       { path: "", element: <HomePage /> },
       { path: "login", element: <LoginPage /> },
+      { path: "register", element: <RegisterPage /> },
       { path: "search", element: <SearchPage /> },
       { path: "design-guide", element: <DesignGuide /> },
       {
