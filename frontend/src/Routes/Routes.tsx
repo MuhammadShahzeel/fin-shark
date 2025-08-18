@@ -11,6 +11,7 @@ import SearchPage from "../pages/SearchPage/SearchPage";
 import DesignGuide from "../pages/DesignGuide/DesignGuide";
 import CompanyPage from "../pages/CompanyPage/CompanyPage";
 import HistoricalDividend from "../Components/HistoricalDividend/HistoricalDividend";
+import LoginPage from "../pages/LoginPage/LoginPage";
 
 export const router = createBrowserRouter([
   {
@@ -18,6 +19,7 @@ export const router = createBrowserRouter([
     element: <App />,
     children: [
       { path: "", element: <HomePage /> },
+      { path: "login", element: <LoginPage /> },
       { path: "search", element: <SearchPage /> },
       { path: "design-guide", element: <DesignGuide /> },
       {
