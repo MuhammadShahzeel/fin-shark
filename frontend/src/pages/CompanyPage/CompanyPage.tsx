@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import type { CompanyProfile } from "../../company";
+
 import { Link, useParams } from "react-router-dom";
 import { getCompanyProfile } from "../../api";
 import Sidebar from "../../Components/Sidebar/Sidebar";
@@ -8,6 +8,7 @@ import Tile from "../../Components/Tile/Tile";
 import Spinner from "../../Components/Spinners/Spinner";
 
 import TenKFinder from "../../Components/TenKFinder/TenKFinder";
+import type { CompanyProfile } from "../../company";
 
 interface Props {}
 
@@ -31,10 +32,9 @@ const CompanyPage = (props: Props) => {
           <Sidebar />
           <CompanyDashboard ticker={ticker!}>
             <Tile title="Company Name" subTitle={company.companyName} />
-            <Tile title="Price" subTitle={company.price.toString()} />
+            <Tile title="Price" subTitle={"$" + company.price.toString()} />
+            <Tile title="DCF" subTitle={"$" + company.dcf.toString()} />
             <Tile title="Sector" subTitle={company.sector} />
-            <Tile title="Market Cap" subTitle={company.mktCap.toString()} />
-
             <TenKFinder ticker={company.symbol} />
             <p className="bg-white shadow rounded text-medium font-medium text-gray-900 p-3 mt-1 m-4">
               {company.description}
