@@ -10,6 +10,7 @@ import HomePage from "../pages/HomePage/HomePage";
 import SearchPage from "../pages/SearchPage/SearchPage";
 import DesignGuide from "../pages/DesignGuide/DesignGuide";
 import CompanyPage from "../pages/CompanyPage/CompanyPage";
+import HistoricalDividend from "../Components/HistoricalDividend/HistoricalDividend";
 
 export const router = createBrowserRouter([
   {
@@ -27,6 +28,7 @@ export const router = createBrowserRouter([
           { path: "income-statement", element: <IncomeStatement /> },
           { path: "balance-sheet", element: <BalanceSheet /> },
           { path: "cashflow-statement", element: <CashflowStatement /> },
+         { path: "historical-dividend", element: <HistoricalDividend /> },
         ],
       },
     ],
