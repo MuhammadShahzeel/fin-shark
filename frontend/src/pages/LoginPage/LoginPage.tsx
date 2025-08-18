@@ -30,84 +30,80 @@ const LoginPage = (props: Props) => {
   };
 
   return (
-    <section className="bg-gray-50 dark:bg-gray-900">
-      <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
-        <div className="w-full bg-white rounded-lg shadow dark:border md:mb-20 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
-          <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
-            <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
-              Sign in to your account
-            </h1>
-            <form
-              className="space-y-4 md:space-y-6"
-              onSubmit={handleSubmit(handleLogin)}
-            >
-              {/* Username */}
-              <div>
-                <label
-                  htmlFor="username"
-                  className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                >
-                  Username
-                </label>
-                <input
-                  type="text"
-                  id="username"
-                  className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-lightGreen focus:border-lightGreen block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
-                  placeholder="Username"
-                  {...register("userName")}
-                />
-                {errors.userName && (
-                  <p className="text-red-400 text-sm mt-1">
-                    {errors.userName.message}
-                  </p>
-                )}
-              </div>
-
-              {/* Password */}
-              <div>
-                <label
-                  htmlFor="password"
-                  className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                >
-                  Password
-                </label>
-                <input
-                  type="password"
-                  id="password"
-                  placeholder="••••••••"
-                  className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-lightGreen focus:border-lightGreen block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
-                  {...register("password")}
-                />
-                {errors.password && (
-                  <p className="text-red-400 text-sm mt-1">
-                    {errors.password.message}
-                  </p>
-                )}
-              </div>
-
-              {/* Submit */}
-              <button
-                type="submit"
-                className="w-full text-white bg-lightGreen hover:opacity-80 focus:ring-4 focus:outline-none focus:ring-lightGreen/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
-              >
-                Sign in
-              </button>
-
-              {/* Signup link */}
-              <p className="text-sm font-light text-gray-500 dark:text-gray-400">
-                Don’t have an account yet?{" "}
-                <Link
-                  to="/register"
-                  className="font-medium text-lightGreen hover:underline"
-                >
-                  Sign up
-                </Link>
-              </p>
-            </form>
-          </div>
-        </div>
+ <section className="bg-gray-100 min-h-screen flex items-center justify-center">
+  <div className="w-full bg-white rounded-lg shadow-lg sm:max-w-md p-8">
+    <h1 className="text-2xl font-bold text-gray-900 mb-6 text-center">
+      Sign in to your account
+    </h1>
+    <form className="space-y-5" onSubmit={handleSubmit(handleLogin)}>
+      {/* Username */}
+      <div>
+        <label
+          htmlFor="username"
+          className="block mb-2 text-sm font-medium text-gray-700"
+        >
+          Username
+        </label>
+        <input
+          type="text"
+          id="username"
+          placeholder="Enter your username"
+          className="w-full border border-gray-300 rounded-lg p-2.5 text-gray-900 focus:ring-lightGreen focus:border-lightGreen"
+          {...register("userName")}
+        />
+        {errors.userName && (
+          <p className="text-red-500 text-sm mt-1">
+            {errors.userName.message}
+          </p>
+        )}
       </div>
-    </section>
+
+      {/* Password */}
+      <div>
+        <label
+          htmlFor="password"
+          className="block mb-2 text-sm font-medium text-gray-700"
+        >
+          Password
+        </label>
+        <input
+          type="password"
+          id="password"
+          placeholder="••••••••"
+          className="w-full border border-gray-300 rounded-lg p-2.5 text-gray-900 focus:ring-lightGreen focus:border-lightGreen"
+          {...register("password")}
+        />
+        {errors.password && (
+          <p className="text-red-500 text-sm mt-1">
+            {errors.password.message}
+          </p>
+        )}
+      </div>
+
+      {/* Submit */}
+      <button
+        type="submit"
+        className="w-full text-white bg-lightGreen hover:opacity-80 focus:ring-4 focus:ring-lightGreen/50 font-medium rounded-lg text-sm px-5 py-2.5"
+      >
+        Sign in
+      </button>
+
+      {/* Signup link */}
+      <p className="text-sm font-light text-gray-500 text-center">
+        Don't have an account yet?{" "}
+        <Link
+          to="/register"
+          className="font-medium text-lightGreen hover:underline"
+        >
+          Sign up
+        </Link>
+      </p>
+    </form>
+  </div>
+</section>
+
+
+
   );
 };
 
