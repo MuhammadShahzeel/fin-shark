@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+39s4N0D3O0=",
+  "dgSpecHash": "P69+Vv2aByw=",
   "success": true,
-  "projectFilePath": "C:\\Users\\shahz\\OneDrive\\Desktop\\project 1\\fin-shark\\backend\\StockPlaform\\StockPlaform.csproj",
+  "projectFilePath": "C:\\Users\\shahz\\OneDrive\\Desktop\\fin-shark\\backend\\StockPlaform\\StockPlaform.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\shahz\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\shahz\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
