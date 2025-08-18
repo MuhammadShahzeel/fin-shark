@@ -7,7 +7,7 @@ import Table from "../Table/Table";
 import Spinner from "../Spinners/Spinner";
 
 import type { CompanyBalanceSheet } from "../../company";
-import { formatLargeMonetaryNumber } from "../../Helpers/NumberFormatting";
+import { formatLargeMonetaryNumber } from "../../helpers/NumberFormatting";
 
 type Props = {};
 

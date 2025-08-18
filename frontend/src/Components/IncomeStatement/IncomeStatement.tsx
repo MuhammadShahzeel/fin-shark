@@ -6,7 +6,7 @@ import { getIncomeStatement } from "../../api";
 import Spinner from "../Spinners/Spinner";
 
 import type { CompanyIncomeStatement } from "../../company";
-import { formatLargeMonetaryNumber, formatRatio } from "../../Helpers/NumberFormatting";
+import { formatLargeMonetaryNumber, formatRatio } from "../../helpers/NumberFormatting";
 
 type Props = {};
 

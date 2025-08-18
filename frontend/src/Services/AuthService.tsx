@@ -1,7 +1,7 @@
 // api.ts
 import axios from "axios";
-import { handleError } from "../Helpers/ErrorHandler";
-import type { UserProfileToken } from "../Models/User";
+import { handleError } from "../helpers/ErrorHandler";
+import type { UserProfileToken } from "../models/User";
 
 ;
 
