@@ -5,7 +5,7 @@ import type { UserProfileToken } from "../models/User";
 
 // Axios instance
 const apiClient = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || "https://localhost:7165/api",
+  baseURL: import.meta.env.VITE_API_URL || "https://localhost:7165/api/",
 });
 
 
