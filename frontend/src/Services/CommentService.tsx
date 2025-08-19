@@ -1,27 +1,31 @@
-// api.ts
 import axios from "axios";
+import type { CommentGet, CommentPost } from "../models/Comment";
 import { handleError } from "../helpers/ErrorHandler";
-import type { CommentPost } from "../models/Comment";
 
 
-// Axios instance
-const apiClient = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || "https://localhost:7165/api/",
-});
+const api = "https://localhost:7165/api/comment/";
 
-
-export const commentPostAPI = async (title: string,
+export const commentPostAPI = async (
+  title: string,
   content: string,
-  symbol: string) => {
+  symbol: string
+) => {
   try {
-    const response = await apiClient.post<CommentPost>(`/comment/${symbol}`, {
-         title,
-      content, 
+    const data = await axios.post<CommentPost>(api + `${symbol}`, {
+      title: title,
+      content: content,
     });
-    return response;
+    return data;
   } catch (error) {
     handleError(error);
   }
 };
 
-
+export const commentGetAPI = async (symbol: string) => {
+  try {
+    const data = await axios.get<CommentGet[]>(api + `?Symbol=${symbol}`);
+    return data;
+  } catch (error) {
+    handleError(error);
+  }
+};

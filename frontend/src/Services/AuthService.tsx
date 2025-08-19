@@ -1,44 +1,34 @@
-// api.ts
 import axios from "axios";
 import { handleError } from "../helpers/ErrorHandler";
 import type { UserProfileToken } from "../models/User";
 
-// Axios instance
-const apiClient = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || "https://localhost:7165/api/",
-});
 
+const api = "https://localhost:7165/api/";
 
-export const loginAPI = async (userName: string, password: string) => {
+export const loginAPI = async (username: string, password: string) => {
   try {
-    const response = await apiClient.post<UserProfileToken>("/account/login", {
-      userName,  
-      password,  
+    const data = await axios.post<UserProfileToken>(api + "account/login", {
+      username: username,
+      password: password,
     });
-    return response;
+    return data;
   } catch (error) {
     handleError(error);
   }
 };
 
-// ==============================
-// ====== REGISTER API ==========
-// ==============================
 export const registerAPI = async (
   email: string,
-  userName: string,
+  username: string,
   password: string
 ) => {
   try {
-    const response = await apiClient.post<UserProfileToken>(
-      "/account/register",
-      {
-        email,    
-        userName, 
-        password, 
-      }
-    );
-    return response;
+    const data = await axios.post<UserProfileToken>(api + "account/register", {
+      email: email,
+      username: username,
+      password: password,
+    });
+    return data;
   } catch (error) {
     handleError(error);
   }
