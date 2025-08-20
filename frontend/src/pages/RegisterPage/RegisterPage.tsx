@@ -14,9 +14,19 @@ type RegisterFormsInputs = {
 };
 
 const validation = Yup.object().shape({
-  email: Yup.string().email("Invalid email").required("Email is required"),
+  email: Yup.string()
+    .email("Invalid email")
+    .required("Email is required"),
+
   userName: Yup.string().required("Username is required"),
-  password: Yup.string().required("Password is required"),
+
+  password: Yup.string()
+    .required("Password is required")
+    .min(12, "Password must be at least 12 characters long")
+    .matches(/[a-z]/, "Password must contain at least one lowercase letter")
+    .matches(/[A-Z]/, "Password must contain at least one uppercase letter")
+    .matches(/[0-9]/, "Password must contain at least one digit")
+    .matches(/[^a-zA-Z0-9]/, "Password must contain at least one special character"),
 });
 
 const RegisterPage = (props: Props) => {
@@ -38,6 +48,7 @@ const RegisterPage = (props: Props) => {
           Create your account
         </h1>
         <form className="space-y-4" onSubmit={handleSubmit(handleRegister)}>
+          {/* Email */}
           <div>
             <label
               htmlFor="email"
@@ -56,6 +67,8 @@ const RegisterPage = (props: Props) => {
               <p className="text-red-500 text-sm">{errors.email.message}</p>
             )}
           </div>
+
+          {/* Username */}
           <div>
             <label
               htmlFor="username"
@@ -74,6 +87,8 @@ const RegisterPage = (props: Props) => {
               <p className="text-red-500 text-sm">{errors.userName.message}</p>
             )}
           </div>
+
+          {/* Password */}
           <div>
             <label
               htmlFor="password"
@@ -93,6 +108,7 @@ const RegisterPage = (props: Props) => {
             )}
           </div>
 
+          {/* Submit Button */}
           <button
             type="submit"
             className="w-full text-white bg-lightGreen hover:opacity-80 focus:ring-4 focus:ring-lightGreen/50 font-medium rounded-lg text-sm px-5 py-2.5"
@@ -100,6 +116,7 @@ const RegisterPage = (props: Props) => {
             Sign up
           </button>
 
+          {/* Login Redirect */}
           <p className="text-sm font-light text-gray-500 text-center">
             Already have an account?{" "}
             <Link
