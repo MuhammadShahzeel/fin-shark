@@ -22,6 +22,9 @@ const Navbar = (props: Props) => {
             <Link to="/search" className="text-black hover:text-darkBlue">
               Search
             </Link>
+            <Link to="/portfolio" className="text-black hover:text-darkBlue">
+              Portfolio
+            </Link>
           </div>
         </div>
 
@@ -65,6 +68,9 @@ const Navbar = (props: Props) => {
         <div className="lg:hidden mt-4 space-y-4 flex flex-col items-center font-bold text-black bg-gray-100 rounded-lg p-4 shadow-md">
           <Link to="/search" onClick={() => setIsOpen(false)}>
             Search
+          </Link>
+          <Link to="/portfolio" onClick={() => setIsOpen(false)}>
+            Portfolio
           </Link>
 
           {isLoggedIn() ? (

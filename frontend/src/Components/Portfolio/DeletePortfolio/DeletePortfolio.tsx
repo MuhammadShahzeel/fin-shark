@@ -1,4 +1,5 @@
-import type {SyntheticEvent } from "react";
+import type { SyntheticEvent } from "react";
+import { FiTrash } from "react-icons/fi";
 
 interface Props {
   onPortfolioDelete: (e: SyntheticEvent) => void;
@@ -7,14 +8,18 @@ interface Props {
 
 const DeletePortfolio = ({ onPortfolioDelete, portfolioValue }: Props) => {
   return (
-    <div>
-      <form onSubmit={onPortfolioDelete}>
-        <input hidden={true} value={portfolioValue} readOnly/>
-              <button className="block w-full py-3 text-white duration-200 border-2 rounded-lg bg-red-500 hover:text-red-500 hover:bg-white border-red-500">
-          X
-        </button>
-      </form>
-    </div>
+    <form onSubmit={onPortfolioDelete}>
+      {/* Hidden input to pass portfolio symbol */}
+      <input type="hidden" value={portfolioValue} readOnly />
+
+      <button
+        type="submit"
+        title={`Delete ${portfolioValue}`}
+        className="p-2 text-red-500 rounded-full hover:bg-red-100 hover:text-red-600 transition-colors"
+      >
+        <FiTrash size={20} />
+      </button>
+    </form>
   );
 };
 

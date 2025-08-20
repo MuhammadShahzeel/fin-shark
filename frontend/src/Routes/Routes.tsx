@@ -3,7 +3,6 @@ import App from "../App";
 
 import CompanyProfile from "../Components/CompanyProfile/CompanyProfile";
 import IncomeStatement from "../Components/IncomeStatement/IncomeStatement";
-
 import BalanceSheet from "../Components/BalanceSheet/BalanceSheet";
 import HistoricalDividend from "../Components/HistoricalDividend/HistoricalDividend";
 import CashflowStatement from "../Components/CashflowStatement/CashflowStatement";
@@ -15,6 +14,7 @@ import RegisterPage from "../pages/RegisterPage/RegisterPage";
 import SearchPage from "../pages/SearchPage/SearchPage";
 import CompanyPage from "../pages/CompanyPage/CompanyPage";
 import DesignGuide from "../pages/DesignGuide/DesignGuide";
+import PortfolioPage from "../pages/PortfolioPage/PortfolioPage";
 
 export const router = createBrowserRouter([
   {
@@ -29,6 +29,14 @@ export const router = createBrowserRouter([
         element: (
           <ProtectedRoute>
             <SearchPage />
+          </ProtectedRoute>
+        ),
+      },
+      {
+        path: "portfolio",
+        element: (
+          <ProtectedRoute>
+            <PortfolioPage />
           </ProtectedRoute>
         ),
       },
