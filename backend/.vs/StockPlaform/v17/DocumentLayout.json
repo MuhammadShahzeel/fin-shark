@@ -3,6 +3,22 @@
   "WorkspaceRootPath": "C:\\Users\\Muhammad Shahzeel\\Desktop\\fin-shark\\backend\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{88A93128-85AE-40F4-ABDC-3814D897A091}|StockPlaform\\StockPlaform.csproj|c:\\users\\muhammad shahzeel\\desktop\\fin-shark\\backend\\stockplaform\\controllers\\commentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88A93128-85AE-40F4-ABDC-3814D897A091}|StockPlaform\\StockPlaform.csproj|solutionrelative:stockplaform\\controllers\\commentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88A93128-85AE-40F4-ABDC-3814D897A091}|StockPlaform\\StockPlaform.csproj|c:\\users\\muhammad shahzeel\\desktop\\fin-shark\\backend\\stockplaform\\controllers\\stockcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88A93128-85AE-40F4-ABDC-3814D897A091}|StockPlaform\\StockPlaform.csproj|solutionrelative:stockplaform\\controllers\\stockcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88A93128-85AE-40F4-ABDC-3814D897A091}|StockPlaform\\StockPlaform.csproj|c:\\users\\muhammad shahzeel\\desktop\\fin-shark\\backend\\stockplaform\\mappers\\commentmappers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88A93128-85AE-40F4-ABDC-3814D897A091}|StockPlaform\\StockPlaform.csproj|solutionrelative:stockplaform\\mappers\\commentmappers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88A93128-85AE-40F4-ABDC-3814D897A091}|StockPlaform\\StockPlaform.csproj|c:\\users\\muhammad shahzeel\\desktop\\fin-shark\\backend\\stockplaform\\dtos\\comment\\commentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88A93128-85AE-40F4-ABDC-3814D897A091}|StockPlaform\\StockPlaform.csproj|solutionrelative:stockplaform\\dtos\\comment\\commentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{88A93128-85AE-40F4-ABDC-3814D897A091}|StockPlaform\\StockPlaform.csproj|c:\\users\\muhammad shahzeel\\desktop\\fin-shark\\backend\\stockplaform\\mappers\\usermappers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{88A93128-85AE-40F4-ABDC-3814D897A091}|StockPlaform\\StockPlaform.csproj|solutionrelative:stockplaform\\mappers\\usermappers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -13,10 +29,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{88A93128-85AE-40F4-ABDC-3814D897A091}|StockPlaform\\StockPlaform.csproj|c:\\users\\muhammad shahzeel\\desktop\\fin-shark\\backend\\stockplaform\\generalize.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{88A93128-85AE-40F4-ABDC-3814D897A091}|StockPlaform\\StockPlaform.csproj|solutionrelative:stockplaform\\generalize.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{88A93128-85AE-40F4-ABDC-3814D897A091}|StockPlaform\\StockPlaform.csproj|c:\\users\\muhammad shahzeel\\desktop\\fin-shark\\backend\\stockplaform\\mappers\\commentmappers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{88A93128-85AE-40F4-ABDC-3814D897A091}|StockPlaform\\StockPlaform.csproj|solutionrelative:stockplaform\\mappers\\commentmappers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{88A93128-85AE-40F4-ABDC-3814D897A091}|StockPlaform\\StockPlaform.csproj|c:\\users\\muhammad shahzeel\\desktop\\fin-shark\\backend\\stockplaform\\readme.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
@@ -39,10 +51,6 @@
       "RelativeMoniker": "D:0:0:{88A93128-85AE-40F4-ABDC-3814D897A091}|StockPlaform\\StockPlaform.csproj|solutionrelative:stockplaform\\repositories\\stockrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{88A93128-85AE-40F4-ABDC-3814D897A091}|StockPlaform\\StockPlaform.csproj|c:\\users\\muhammad shahzeel\\desktop\\fin-shark\\backend\\stockplaform\\controllers\\stockcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{88A93128-85AE-40F4-ABDC-3814D897A091}|StockPlaform\\StockPlaform.csproj|solutionrelative:stockplaform\\controllers\\stockcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{88A93128-85AE-40F4-ABDC-3814D897A091}|StockPlaform\\StockPlaform.csproj|c:\\users\\muhammad shahzeel\\desktop\\fin-shark\\backend\\stockplaform\\many to many.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{88A93128-85AE-40F4-ABDC-3814D897A091}|StockPlaform\\StockPlaform.csproj|solutionrelative:stockplaform\\many to many.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
@@ -53,10 +61,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{88A93128-85AE-40F4-ABDC-3814D897A091}|StockPlaform\\StockPlaform.csproj|c:\\users\\muhammad shahzeel\\desktop\\fin-shark\\backend\\stockplaform\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{88A93128-85AE-40F4-ABDC-3814D897A091}|StockPlaform\\StockPlaform.csproj|solutionrelative:stockplaform\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{88A93128-85AE-40F4-ABDC-3814D897A091}|StockPlaform\\StockPlaform.csproj|c:\\users\\muhammad shahzeel\\desktop\\fin-shark\\backend\\stockplaform\\controllers\\commentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{88A93128-85AE-40F4-ABDC-3814D897A091}|StockPlaform\\StockPlaform.csproj|solutionrelative:stockplaform\\controllers\\commentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{88A93128-85AE-40F4-ABDC-3814D897A091}|StockPlaform\\StockPlaform.csproj|c:\\users\\muhammad shahzeel\\desktop\\fin-shark\\backend\\stockplaform\\repositories\\commentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -86,11 +90,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "comment filter.txt",
               "DocumentMoniker": "C:\\Users\\Muhammad Shahzeel\\Desktop\\fin-shark\\backend\\StockPlaform\\comment filter.txt",
               "RelativeDocumentMoniker": "StockPlaform\\comment filter.txt",
@@ -107,32 +111,92 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
+              "Title": "CommentDto.cs",
+              "DocumentMoniker": "C:\\Users\\Muhammad Shahzeel\\Desktop\\fin-shark\\backend\\StockPlaform\\Dtos\\Comment\\CommentDto.cs",
+              "RelativeDocumentMoniker": "StockPlaform\\Dtos\\Comment\\CommentDto.cs",
+              "ToolTip": "C:\\Users\\Muhammad Shahzeel\\Desktop\\fin-shark\\backend\\StockPlaform\\Dtos\\Comment\\CommentDto.cs",
+              "RelativeToolTip": "StockPlaform\\Dtos\\Comment\\CommentDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-19T20:30:46.974Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "UserMappers.cs",
               "DocumentMoniker": "C:\\Users\\Muhammad Shahzeel\\Desktop\\fin-shark\\backend\\StockPlaform\\Mappers\\UserMappers.cs",
               "RelativeDocumentMoniker": "StockPlaform\\Mappers\\UserMappers.cs",
               "ToolTip": "C:\\Users\\Muhammad Shahzeel\\Desktop\\fin-shark\\backend\\StockPlaform\\Mappers\\UserMappers.cs",
               "RelativeToolTip": "StockPlaform\\Mappers\\UserMappers.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAAABwAAAAHAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-07T20:37:38.023Z",
+              "WhenOpened": "2025-08-07T20:37:38.023Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CommentMappers.cs",
+              "DocumentMoniker": "C:\\Users\\Muhammad Shahzeel\\Desktop\\fin-shark\\backend\\StockPlaform\\Mappers\\CommentMappers.cs",
+              "RelativeDocumentMoniker": "StockPlaform\\Mappers\\CommentMappers.cs",
+              "ToolTip": "C:\\Users\\Muhammad Shahzeel\\Desktop\\fin-shark\\backend\\StockPlaform\\Mappers\\CommentMappers.cs",
+              "RelativeToolTip": "StockPlaform\\Mappers\\CommentMappers.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAIBAwDIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-07T20:37:45.04Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CommentController.cs",
+              "DocumentMoniker": "C:\\Users\\Muhammad Shahzeel\\Desktop\\fin-shark\\backend\\StockPlaform\\Controllers\\CommentController.cs",
+              "RelativeDocumentMoniker": "StockPlaform\\Controllers\\CommentController.cs",
+              "ToolTip": "C:\\Users\\Muhammad Shahzeel\\Desktop\\fin-shark\\backend\\StockPlaform\\Controllers\\CommentController.cs",
+              "RelativeToolTip": "StockPlaform\\Controllers\\CommentController.cs",
+              "ViewState": "AgIAAJUAAAAAAAAAAAAywJ4AAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T16:06:59.39Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "StockMappers.cs",
-              "DocumentMoniker": "C:\\Users\\Muhammad Shahzeel\\Desktop\\fin-shark\\backend\\StockPlaform\\Mappers\\StockMappers.cs",
-              "RelativeDocumentMoniker": "StockPlaform\\Mappers\\StockMappers.cs",
-              "ToolTip": "C:\\Users\\Muhammad Shahzeel\\Desktop\\fin-shark\\backend\\StockPlaform\\Mappers\\StockMappers.cs",
-              "RelativeToolTip": "StockPlaform\\Mappers\\StockMappers.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "StockController.cs",
+              "DocumentMoniker": "C:\\Users\\Muhammad Shahzeel\\Desktop\\fin-shark\\backend\\StockPlaform\\Controllers\\StockController.cs",
+              "RelativeDocumentMoniker": "StockPlaform\\Controllers\\StockController.cs",
+              "ToolTip": "C:\\Users\\Muhammad Shahzeel\\Desktop\\fin-shark\\backend\\StockPlaform\\Controllers\\StockController.cs",
+              "RelativeToolTip": "StockPlaform\\Controllers\\StockController.cs",
+              "ViewState": "AgIAAGMAAAAAAAAAAAA2wIEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-07T20:32:56.613Z"
+              "WhenOpened": "2025-08-05T15:10:22.998Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Muhammad Shahzeel\\Desktop\\fin-shark\\backend\\StockPlaform\\appsettings.json",
+              "RelativeDocumentMoniker": "StockPlaform\\appsettings.json",
+              "ToolTip": "C:\\Users\\Muhammad Shahzeel\\Desktop\\fin-shark\\backend\\StockPlaform\\appsettings.json",
+              "RelativeToolTip": "StockPlaform\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAACEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-08-05T15:05:12.518Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "generalize.txt",
+              "DocumentMoniker": "C:\\Users\\Muhammad Shahzeel\\Desktop\\fin-shark\\backend\\StockPlaform\\generalize.txt",
+              "RelativeDocumentMoniker": "StockPlaform\\generalize.txt",
+              "ToolTip": "C:\\Users\\Muhammad Shahzeel\\Desktop\\fin-shark\\backend\\StockPlaform\\generalize.txt",
+              "RelativeToolTip": "StockPlaform\\generalize.txt",
+              "ViewState": "AgIAAFgBAAAAAAAAAAAAAEoBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-08-06T19:34:23.11Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "readme.txt",
               "DocumentMoniker": "C:\\Users\\Muhammad Shahzeel\\Desktop\\fin-shark\\backend\\StockPlaform\\readme.txt",
               "RelativeDocumentMoniker": "StockPlaform\\readme.txt",
@@ -144,57 +208,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "generalize.txt",
-              "DocumentMoniker": "C:\\Users\\Muhammad Shahzeel\\Desktop\\fin-shark\\backend\\StockPlaform\\generalize.txt",
-              "RelativeDocumentMoniker": "StockPlaform\\generalize.txt",
-              "ToolTip": "C:\\Users\\Muhammad Shahzeel\\Desktop\\fin-shark\\backend\\StockPlaform\\generalize.txt",
-              "RelativeToolTip": "StockPlaform\\generalize.txt",
-              "ViewState": "AgIAAFgBAAAAAAAAAAAAAEoBAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2025-08-06T19:34:23.11Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\Muhammad Shahzeel\\Desktop\\fin-shark\\backend\\StockPlaform\\appsettings.json",
-              "RelativeDocumentMoniker": "StockPlaform\\appsettings.json",
-              "ToolTip": "C:\\Users\\Muhammad Shahzeel\\Desktop\\fin-shark\\backend\\StockPlaform\\appsettings.json",
-              "RelativeToolTip": "StockPlaform\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAACEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-08-05T15:05:12.518Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "CommentMappers.cs",
-              "DocumentMoniker": "C:\\Users\\Muhammad Shahzeel\\Desktop\\fin-shark\\backend\\StockPlaform\\Mappers\\CommentMappers.cs",
-              "RelativeDocumentMoniker": "StockPlaform\\Mappers\\CommentMappers.cs",
-              "ToolTip": "C:\\Users\\Muhammad Shahzeel\\Desktop\\fin-shark\\backend\\StockPlaform\\Mappers\\CommentMappers.cs",
-              "RelativeToolTip": "StockPlaform\\Mappers\\CommentMappers.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-07T20:37:45.04Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "StockController.cs",
-              "DocumentMoniker": "C:\\Users\\Muhammad Shahzeel\\Desktop\\fin-shark\\backend\\StockPlaform\\Controllers\\StockController.cs",
-              "RelativeDocumentMoniker": "StockPlaform\\Controllers\\StockController.cs",
-              "ToolTip": "C:\\Users\\Muhammad Shahzeel\\Desktop\\fin-shark\\backend\\StockPlaform\\Controllers\\StockController.cs",
-              "RelativeToolTip": "StockPlaform\\Controllers\\StockController.cs",
-              "ViewState": "AgIAAGMAAAAAAAAAAAAcwIEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-05T15:10:22.998Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 8,
+              "Title": "StockMappers.cs",
+              "DocumentMoniker": "C:\\Users\\Muhammad Shahzeel\\Desktop\\fin-shark\\backend\\StockPlaform\\Mappers\\StockMappers.cs",
+              "RelativeDocumentMoniker": "StockPlaform\\Mappers\\StockMappers.cs",
+              "ToolTip": "C:\\Users\\Muhammad Shahzeel\\Desktop\\fin-shark\\backend\\StockPlaform\\Mappers\\StockMappers.cs",
+              "RelativeToolTip": "StockPlaform\\Mappers\\StockMappers.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-07T20:32:56.613Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "StockRepository.cs",
               "DocumentMoniker": "C:\\Users\\Muhammad Shahzeel\\Desktop\\fin-shark\\backend\\StockPlaform\\Repositories\\StockRepository.cs",
               "RelativeDocumentMoniker": "StockPlaform\\Repositories\\StockRepository.cs",
@@ -206,19 +232,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "CommentController.cs",
-              "DocumentMoniker": "C:\\Users\\Muhammad Shahzeel\\Desktop\\fin-shark\\backend\\StockPlaform\\Controllers\\CommentController.cs",
-              "RelativeDocumentMoniker": "StockPlaform\\Controllers\\CommentController.cs",
-              "ToolTip": "C:\\Users\\Muhammad Shahzeel\\Desktop\\fin-shark\\backend\\StockPlaform\\Controllers\\CommentController.cs",
-              "RelativeToolTip": "StockPlaform\\Controllers\\CommentController.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAACEAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-05T16:06:59.39Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "Stock.cs",
               "DocumentMoniker": "C:\\Users\\Muhammad Shahzeel\\Desktop\\fin-shark\\backend\\StockPlaform\\Models\\Stock.cs",
               "RelativeDocumentMoniker": "StockPlaform\\Models\\Stock.cs",
@@ -230,7 +244,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "many to many.txt",
               "DocumentMoniker": "C:\\Users\\Muhammad Shahzeel\\Desktop\\fin-shark\\backend\\StockPlaform\\many to many.txt",
               "RelativeDocumentMoniker": "StockPlaform\\many to many.txt",
@@ -242,7 +256,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "PortfolioController.cs",
               "DocumentMoniker": "C:\\Users\\Muhammad Shahzeel\\Desktop\\fin-shark\\backend\\StockPlaform\\Controllers\\PortfolioController.cs",
               "RelativeDocumentMoniker": "StockPlaform\\Controllers\\PortfolioController.cs",
@@ -254,7 +268,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "CommentRepository.cs",
               "DocumentMoniker": "C:\\Users\\Muhammad Shahzeel\\Desktop\\fin-shark\\backend\\StockPlaform\\Repositories\\CommentRepository.cs",
               "RelativeDocumentMoniker": "StockPlaform\\Repositories\\CommentRepository.cs",
@@ -266,7 +280,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Muhammad Shahzeel\\Desktop\\fin-shark\\backend\\StockPlaform\\Program.cs",
               "RelativeDocumentMoniker": "StockPlaform\\Program.cs",
@@ -278,7 +292,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "FMPService.cs",
               "DocumentMoniker": "C:\\Users\\Muhammad Shahzeel\\Desktop\\fin-shark\\backend\\StockPlaform\\Services\\FMPService.cs",
               "RelativeDocumentMoniker": "StockPlaform\\Services\\FMPService.cs",
@@ -290,7 +304,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "CommentQueryObject.cs",
               "DocumentMoniker": "C:\\Users\\Muhammad Shahzeel\\Desktop\\fin-shark\\backend\\StockPlaform\\Helpers\\CommentQueryObject.cs",
               "RelativeDocumentMoniker": "StockPlaform\\Helpers\\CommentQueryObject.cs",
@@ -302,7 +316,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "ICommentRepository.cs",
               "DocumentMoniker": "C:\\Users\\Muhammad Shahzeel\\Desktop\\fin-shark\\backend\\StockPlaform\\Interfaces\\ICommentRepository.cs",
               "RelativeDocumentMoniker": "StockPlaform\\Interfaces\\ICommentRepository.cs",
@@ -314,7 +328,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "PortfolioRepository.cs",
               "DocumentMoniker": "C:\\Users\\Muhammad Shahzeel\\Desktop\\fin-shark\\backend\\StockPlaform\\Repositories\\PortfolioRepository.cs",
               "RelativeDocumentMoniker": "StockPlaform\\Repositories\\PortfolioRepository.cs",

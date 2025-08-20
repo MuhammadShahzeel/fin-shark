@@ -1,7 +1,7 @@
 import type { SyntheticEvent } from "react";
 import CardPortfolio from "../CardPortfolio/CardPortfolio";
 import type { PortfolioGet } from "../../../models/Portfolio";
-import { v4 as uuidv4 } from "uuid";
+
 
 
 interface Props {
@@ -21,7 +21,7 @@ const ListPortfolio = ({ portfolioValues, onPortfolioDelete }: Props) => {
             portfolioValues.map((portfolioValue) => {
               return (
                 <CardPortfolio
-                  key={uuidv4()}
+                  key={portfolioValue.id}
                   portfolioValue={portfolioValue}
                   onPortfolioDelete={onPortfolioDelete}
                 />
